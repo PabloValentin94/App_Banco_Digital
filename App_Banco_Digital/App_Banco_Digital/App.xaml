@@ -2,7 +2,18 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Banco_Digital.App">
+    
     <Application.Resources>
 
+        <Style x:Key="entry_cadastro" TargetType="Entry">
+
+            <Setter Property="TextColor" Value="#000000"/>
+            <Setter Property="PlaceholderColor" Value="#808080"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="Keyboard" Value="Text"/>
+
+        </Style>
+
     </Application.Resources>
+    
 </Application>

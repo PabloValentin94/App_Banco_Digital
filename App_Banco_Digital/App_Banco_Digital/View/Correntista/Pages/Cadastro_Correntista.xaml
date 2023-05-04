@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Banco_Digital.View.Correntista.Pages.Cadastro_Correntista">
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+            <Frame>
+
+                <StackLayout>
+
+                    <Grid ColumnDefinitions="Auto, *, Auto, *" RowDefinitions="*, *, *, *, *">
+
+                        <StackLayout>
+
+                            <Label x:Name="lbl_nome_correntista" Text="Nome:"/>
+                            <Entry x:Name="txt_nome_correntista" Style="{ StaticResource entry_cadastro }"/>
+
+                        </StackLayout>
+
+                        <StackLayout>
+
+                            <Label x:Name="lbl_cpf_correntista" Text="CPF:"/>
+                            <Entry x:Name="txt_cpf_correntista" Style="{ StaticResource entry_cadastro }"/>
+
+                        </StackLayout>
+
+                        <StackLayout>
+
+                            <Label x:Name="lbl_data_nascimento_correntista" Text="Data de Nascimento:"/>
+                            <Entry x:Name="txt_data_nascimento_correntista" Style="{ StaticResource entry_cadastro }"/>
+
+                        </StackLayout>
+
+                        <StackLayout>
+
+                            <Label x:Name="lbl_ativo_correntista" Text="Ativo?"/>
+                            <Entry x:Name="txt_ativo_correntista" Style="{ StaticResource entry_cadastro }"/>
+
+                        </StackLayout>
+
+                        <StackLayout>
+
+                            <Label x:Name="lbl_senha_correntista" Text="Senha:"/>
+                            <Entry x:Name="txt_senha_correntista" Style="{ StaticResource entry_cadastro }"/>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </StackLayout>
+                
+            </Frame>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>
