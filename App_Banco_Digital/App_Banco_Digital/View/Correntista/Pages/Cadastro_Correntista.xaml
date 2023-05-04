@@ -2,60 +2,79 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Banco_Digital.View.Correntista.Pages.Cadastro_Correntista">
-    
-    <ContentPage.Content>
+
+    <ContentPage.Resources>
+
+        <Style x:Key="agrupamento" TargetType="StackLayout">
+
+            <Setter Property="VerticalOptions" Value="Center"/>
+
+        </Style>
         
-        <StackLayout>
+    </ContentPage.Resources>
 
-            <Frame>
+    <ContentPage.Content>
 
-                <StackLayout>
+        <Grid RowDefinitions="500" VerticalOptions="Center">
 
-                    <Grid ColumnDefinitions="Auto, *, Auto, *" RowDefinitions="*, *, *, *, *">
+            <Frame Grid.Row="0" BorderColor="#000000" CornerRadius="15" Margin="10,0,10,0">
 
-                        <StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
 
-                            <Label x:Name="lbl_nome_correntista" Text="Nome:"/>
-                            <Entry x:Name="txt_nome_correntista" Style="{ StaticResource entry_cadastro }"/>
+                    <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *, *"
+                          RowSpacing="10">
 
-                        </StackLayout>
+                        <StackLayout Style="{ StaticResource agrupamento }"
+                                     Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
 
-                        <StackLayout>
+                            <Label x:Name="lbl_nome_correntista" Text="Nome:"
+                                   Style="{ StaticResource label_cadastro }"/>
 
-                            <Label x:Name="lbl_cpf_correntista" Text="CPF:"/>
-                            <Entry x:Name="txt_cpf_correntista" Style="{ StaticResource entry_cadastro }"/>
-
-                        </StackLayout>
-
-                        <StackLayout>
-
-                            <Label x:Name="lbl_data_nascimento_correntista" Text="Data de Nascimento:"/>
-                            <Entry x:Name="txt_data_nascimento_correntista" Style="{ StaticResource entry_cadastro }"/>
+                            <Entry x:Name="txt_nome_correntista"
+                                   Style="{ StaticResource entry_cadastro }"
+                                   Placeholder="Escreva seu nome aqui."/>
 
                         </StackLayout>
 
-                        <StackLayout>
+                        <StackLayout Style="{ StaticResource agrupamento }"
+                                     Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
 
-                            <Label x:Name="lbl_ativo_correntista" Text="Ativo?"/>
-                            <Entry x:Name="txt_ativo_correntista" Style="{ StaticResource entry_cadastro }"/>
+                            <Label x:Name="lbl_cpf_correntista" Text="CPF:"
+                                   Style="{ StaticResource label_cadastro }"/>
+
+                            <Entry x:Name="txt_cpf_correntista" Style="{ StaticResource entry_cadastro }"
+                                   Placeholder="Escreva seu CPF aqui."/>
 
                         </StackLayout>
 
-                        <StackLayout>
+                        <Label x:Name="lbl_data_nascimento_correntista" Text="Data de Nascimento:"
+                               Grid.Column="0" Grid.Row="2" Style="{ StaticResource label_cadastro }"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
 
-                            <Label x:Name="lbl_senha_correntista" Text="Senha:"/>
-                            <Entry x:Name="txt_senha_correntista" Style="{ StaticResource entry_cadastro }"/>
+                        <DatePicker x:Name="dtpck_data_nascimento" Format="dd/MM/yyyy"
+                                    Grid.Column="1" Grid.Row="2"
+                                    VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                        <StackLayout Style="{ StaticResource agrupamento }"
+                                     Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">
+
+                            <Label x:Name="lbl_senha_correntista" Text="Senha:"
+                                   Style="{ StaticResource label_cadastro }"/>
+
+                            <Entry x:Name="txt_senha_correntista"
+                                   Style="{ StaticResource entry_cadastro }"
+                                   Placeholder="Crie uma senha para sua conta."/>
 
                         </StackLayout>
 
                     </Grid>
 
                 </StackLayout>
-                
+
             </Frame>
-            
-        </StackLayout>
-        
+
+        </Grid>
+
     </ContentPage.Content>
     
 </ContentPage>
