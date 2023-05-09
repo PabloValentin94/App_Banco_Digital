@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Banco_Digital.View.Login.Pages.Login"
+             BackgroundColor="#FFFFFF">
+
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="Center">
+
+            <Grid ColumnDefinitions="*, 200, *" RowDefinitions="200, *" Margin="40">
+
+                <Frame BackgroundColor="#820AD1" CornerRadius="150" Grid.Column="1" Grid.Row="0">
+
+                    <Image x:Name="img_logo" Aspect="Fill"/>
+
+                </Frame>
+
+                <StackLayout VerticalOptions="Center" Spacing="20" Margin="0,60,0,0"
+                             Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
+
+                    <Entry x:Name="txt_usuario" Placeholder="Usuário" PlaceholderColor="#808080"
+                           Keyboard="Text" TextColor="#000000" ClearButtonVisibility="WhileEditing"/>
+
+                    <StackLayout Spacing="0">
+
+                        <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="#808080"
+                               Keyboard="Text" IsPassword="True" TextColor="#000000"
+                               ClearButtonVisibility="WhileEditing"/>
+
+                        <Button x:Name="btn_mostrar_ocultar_senha" Text="Exibir senha"
+                                BackgroundColor="Transparent" TextColor="#000000"
+                                HorizontalOptions="End" FontSize="12" FontAttributes="Bold"
+                                Clicked="btn_mostrar_ocultar_senha_Clicked"/>
+
+                    </StackLayout>
+
+                    <Grid ColumnDefinitions="Auto, *">
+
+                        <CheckBox Grid.Column="0"/>
+
+                        <Label Text="Manter-se conectado?" Grid.Column="1" TextColor="#000000"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+
+                    </Grid>
+
+                    <Button x:Name="btn_entrar" Text="ENTRAR" Margin="0,30,0,0"
+                            BackgroundColor="#820AD1" Clicked="btn_entrar_Clicked"
+                            CornerRadius="10" TextColor="#FFFFFF" FontAttributes="Bold"/>
+
+                    <Button x:Name="btn_redirecionar_cadastro_conta" TextColor="#000000"
+                            Text="Clique aqui, caso ainda não possua um cadastro."
+                            BackgroundColor="Transparent" FontSize="10"
+                            FontAttributes="Italic"
+                            Clicked="btn_redirecionar_cadastro_conta_Clicked"/>
+
+                </StackLayout>
+
+            </Grid>
+            
+        </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

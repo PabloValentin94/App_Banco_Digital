@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 using App_Banco_Digital.Model;
-
-using Newtonsoft.Json;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace App_Banco_Digital.Service
 {

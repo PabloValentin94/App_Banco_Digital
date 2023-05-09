@@ -13,7 +13,7 @@ namespace App_Banco_Digital
 
             InitializeComponent();
 
-            MainPage = new View.Correntista.Pages.Cadastro_Correntista();
+            MainPage = new View.Login.Pages.Login();
 
         }
 

@@ -8,7 +8,7 @@ namespace App_Banco_Digital.Model
     public class Correntista
     {
 
-        public int id { get; set; }
+        public int id_correntista { get; set; }
 
         public string nome { get; set; }
 
