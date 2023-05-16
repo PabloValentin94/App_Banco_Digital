@@ -21,7 +21,23 @@
 		<item name="colorPrimaryDark">@color/colorAccent</item>
 
 		<item name="colorAccent">@color/colorAccent</item>
+
+		<item name="android:datePickerDialogTheme">@style/DatePickerTheme</item>
+
+		<item name="android:timePickerDialogTheme">@style/TimePickerTheme</item>
 	  
+	</style>
+
+	<style name="DatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+
+		<item name="colorAccent">@color/colorAccent</item>
+		
+	</style>
+
+	<style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+
+		<item name="colorAccent">@color/colorAccent</item>
+
 	</style>
 	
 </resources>

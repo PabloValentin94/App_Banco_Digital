@@ -11,20 +11,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="View\Assets\**" />
+    <Compile Remove="View\Conta\**" />
+    <Compile Remove="View\Login\**" />
     <Compile Remove="View\Pages\**" />
-    <EmbeddedResource Remove="View\Assets\**" />
+    <EmbeddedResource Remove="View\Conta\**" />
+    <EmbeddedResource Remove="View\Login\**" />
     <EmbeddedResource Remove="View\Pages\**" />
-    <None Remove="View\Assets\**" />
+    <None Remove="View\Conta\**" />
+    <None Remove="View\Login\**" />
     <None Remove="View\Pages\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="View\Login\Assets\Images\Logo.png" />
+    <None Remove="View\Assets\Correntista\Cadastro_Correntista.jpg" />
+    <None Remove="View\Assets\Login\Logo.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="View\Login\Assets\Images\Logo.png">
+    <EmbeddedResource Include="View\Assets\Correntista\Cadastro_Correntista.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Assets\Login\Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -36,16 +43,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\Conta\Assets\" />
-    <Folder Include="View\Conta\Pages\" />
-    <Folder Include="View\Correntista\Assets\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="View\Correntista\Pages\Cadastro_Correntista.xaml">
+    <EmbeddedResource Update="View\Modules\Correntista\Cadastro_Correntista.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Login\Pages\Login.xaml">
+    <EmbeddedResource Update="View\Modules\Inicio\Inicio.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Modules\Login\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

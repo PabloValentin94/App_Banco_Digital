@@ -13,7 +13,19 @@ namespace App_Banco_Digital
 
             InitializeComponent();
 
-            MainPage = new View.Login.Pages.Login();
+            if(this.Properties.ContainsKey("logado"))
+            {
+
+                MainPage = new NavigationPage(new View.Modules.Inicio.Inicio());
+
+            }
+
+            else
+            {
+
+                MainPage = new NavigationPage(new View.Modules.Login.Login());
+
+            }
 
         }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App_Banco_Digital.View.Correntista.Pages
+namespace App_Banco_Digital.View.Modules.Correntista
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -18,6 +18,9 @@ namespace App_Banco_Digital.View.Correntista.Pages
         {
 
             InitializeComponent();
+
+            img_cadastro_correntista.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets." +
+                                              "Correntista.Cadastro_Correntista.jpg");
 
         }
 

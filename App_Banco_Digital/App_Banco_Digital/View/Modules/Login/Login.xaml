@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Banco_Digital.View.Login.Pages.Login"
+             x:Class="App_Banco_Digital.View.Modules.Login.Login"
              BackgroundColor="#FFFFFF">
 
     <ContentPage.Content>
@@ -10,7 +10,7 @@
 
             <Grid ColumnDefinitions="*, 200, *" RowDefinitions="200, *" Margin="40">
 
-                <Frame BackgroundColor="#820AD1" CornerRadius="150" Grid.Column="1" Grid.Row="0">
+                <Frame BackgroundColor="#00AFFF" CornerRadius="150" Grid.Column="1" Grid.Row="0">
 
                     <Image x:Name="img_logo" Aspect="Fill"/>
 
@@ -35,17 +35,21 @@
 
                     </StackLayout>
 
-                    <Grid ColumnDefinitions="Auto, *">
+                    <Grid ColumnDefinitions="Auto, *, Auto">
 
-                        <CheckBox Grid.Column="0"/>
+                        <CheckBox x:Name="chbox_persistencia" Grid.Column="0"/>
 
                         <Label Text="Manter-se conectado?" Grid.Column="1" TextColor="#000000"
                                VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
 
+                        <ActivityIndicator x:Name="actInd_buscando_usuarios"
+                                           Grid.Column="2" Color="#00AFFF"
+                                           IsRunning="False" HorizontalOptions="End"/>
+
                     </Grid>
 
                     <Button x:Name="btn_entrar" Text="ENTRAR" Margin="0,30,0,0"
-                            BackgroundColor="#820AD1" Clicked="btn_entrar_Clicked"
+                            BackgroundColor="#00AFFF" Clicked="btn_entrar_Clicked"
                             CornerRadius="10" TextColor="#FFFFFF" FontAttributes="Bold"/>
 
                     <Button x:Name="btn_redirecionar_cadastro_conta" TextColor="#000000"
