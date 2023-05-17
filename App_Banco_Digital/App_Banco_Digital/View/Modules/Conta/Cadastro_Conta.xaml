@@ -1,16 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Banco_Digital.View.Modules.Conta.Cadastro_Conta">
+             x:Class="App_Banco_Digital.View.Modules.Conta.Cadastro_Conta"
+             Style="{ StaticResource fundo_paginas }">
     
     <ContentPage.Content>
-        
-        <StackLayout>
-            
-            
-            
+
+        <StackLayout Padding="10" Spacing="10">
+
+            <Image x:Name="img_banner_cadastro_conta" Aspect="Fill"/>
+
+            <Label Text="Criar Conta:" FontAttributes="Bold"
+                   FontSize="25" TextColor="#000000"/>
+
+            <ScrollView>
+
+                <StackLayout Spacing="10" VerticalOptions="Center">
+
+                    <!--<Label Text="Número" Style="{ StaticResource label_cadastro }"/>
+                    <Entry x:Name="txt_numero_conta" Keyboard="Numeric"
+                           Style="{ StaticResource entry_cadastro }"/>-->
+
+                    <Label Text="Nome de Usuário:" Style="{ StaticResource label_cadastro }"/>
+                    <Entry x:Name="txt_nome_usuario_conta" Keyboard="Text"
+                           Placeholder="Um apelido, por exemplo"
+                           Style="{ StaticResource entry_cadastro }"/>
+
+                    <Label Text="Tipo:" Style="{ StaticResource label_cadastro }"/>
+                    <Picker x:Name="pck_tipo_conta" TextColor="#808080"
+                            HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Senha:" Style="{ StaticResource label_cadastro }"/>
+                    <Entry x:Name="txt_senha_conta" Keyboard="Text"
+                           Placeholder="Crie uma senha para a sua conta"
+                           Style="{ StaticResource entry_cadastro }"/>
+
+                    <!--<Label Text="Ativo:" Style="{ StaticResource label_cadastro }"/>
+                    <Grid RadioButtonGroup.GroupName="opcoes" ColumnDefinitions="*,*">
+
+                        <RadioButton Content="Ativo" GroupName="opcoes"
+                                     Grid.Column="0" HorizontalOptions="Center"/>
+
+                        <RadioButton Content="Inativo" GroupName="opcoes"
+                                     Grid.Column="1" HorizontalOptions="Center"/>
+
+                    </Grid>-->
+
+                </StackLayout>
+
+            </ScrollView>
+
         </StackLayout>
-        
+
     </ContentPage.Content>
     
 </ContentPage>

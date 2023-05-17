@@ -26,7 +26,7 @@ namespace App_Banco_Digital.View.Modules.Login
 
             this.propriedades_aplicacao = (App) Application.Current;
 
-            //NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, false);
 
             img_logo_login.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Login.Logo_login.png");
 
@@ -38,14 +38,42 @@ namespace App_Banco_Digital.View.Modules.Login
             try
             {
 
-                actInd_buscando_usuarios.IsRunning = true;
+                string usuario = txt_usuario.Text;
+
+                string senha = txt_senha.Text;
 
                 List<Model.Correntista> lista_correntistas = await Data_Service_Correntista.GetListAsync();
 
-                if(lista_correntistas.Count > 0)
+                if(String.IsNullOrEmpty(usuario) || String.IsNullOrEmpty(senha))
                 {
 
-                    if(lista_correntistas.Any(i => (i.nome == txt_usuario.Text && i.senha_correntista == txt_senha.Text)))
+                    await DisplayAlert("Atenção!", "Preencha todos os campos antes de prosseguir.", "OK");
+
+                }
+
+                else
+                {
+
+                    actInd_buscando_usuarios.IsRunning = true;
+
+                    if (lista_correntistas.Count > 0 &&
+                        lista_correntistas.Any(i => (i.nome == usuario && i.senha_correntista == senha)))
+                    {
+
+                        await DisplayAlert("Aviso!", "Login efetuado com sucesso. Seja bem-vindo(a)!", "OK");
+
+                        if (chbox_persistencia.IsChecked == true)
+                        {
+
+                            this.propriedades_aplicacao.Properties.Add("logado", usuario.ToUpper());
+
+                        }
+
+                        this.propriedades_aplicacao.MainPage = new Menu.Menu();
+
+                    }
+
+                    else if (this.propriedades_aplicacao.lista_local_correntistas.Any(i => (i.nome == usuario && i.senha_correntista == senha)))
                     {
 
                         await DisplayAlert("Aviso!", "Login efetuado com sucesso. Seja bem-vindo(a)!", "OK");
@@ -64,7 +92,7 @@ namespace App_Banco_Digital.View.Modules.Login
                     else
                     {
 
-                        await DisplayAlert("Aviso!", "Falha no login! Tente novamente.", "OK");
+                        await DisplayAlert("Aviso!", "Nenhum usuário encontrado! Tente novamente.", "OK");
 
                     }
 

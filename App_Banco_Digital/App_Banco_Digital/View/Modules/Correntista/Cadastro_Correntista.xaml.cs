@@ -19,8 +19,10 @@ namespace App_Banco_Digital.View.Modules.Correntista
 
             InitializeComponent();
 
-            img_cadastro_correntista.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets." +
-                                              "Correntista.Banner_Cadastro_Correntista.jpg");
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            /*img_cadastro_correntista.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets." +
+                                              "Correntista.Banner_Cadastro_Correntista.jpg");*/
 
         }
 

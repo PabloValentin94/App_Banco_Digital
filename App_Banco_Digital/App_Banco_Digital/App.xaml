@@ -7,12 +7,17 @@
 
         <!--<Color x:Key="cor_sistema">#00AFFF</Color>-->
 
+        <Style x:Key="fundo_paginas" TargetType="Page">
+
+            <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+
+        </Style>
+
         <Style x:Key="entry_cadastro" TargetType="Entry">
 
             <Setter Property="TextColor" Value="#000000"/>
             <Setter Property="PlaceholderColor" Value="#808080"/>
             <Setter Property="HorizontalTextAlignment" Value="Center"/>
-            <Setter Property="Keyboard" Value="Text"/>
 
         </Style>
 

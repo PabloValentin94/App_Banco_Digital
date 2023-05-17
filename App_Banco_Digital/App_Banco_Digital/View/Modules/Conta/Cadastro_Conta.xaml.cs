@@ -14,10 +14,19 @@ namespace App_Banco_Digital.View.Modules.Conta
     public partial class Cadastro_Conta : ContentPage
     {
 
+        string[] tipos_conta = {"Conta Corrente"};
+
         public Cadastro_Conta()
         {
 
             InitializeComponent();
+
+            img_banner_cadastro_conta.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets." +
+                                               "Conta.Banner_cadastro_conta.jpg");
+
+            pck_tipo_conta.ItemsSource = this.tipos_conta;
+
+            NavigationPage.SetHasNavigationBar(this, false);
 
         }
 

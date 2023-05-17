@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <None Remove="View\Assets\Abertura\Logo_abertura.png" />
-    <None Remove="View\Assets\Correntista\Banner_Cadastro_Correntista.jpg" />
+    <None Remove="View\Assets\Conta\Banner_Cadastro_Conta.jpg" />
     <None Remove="View\Assets\Login\Logo_login.png" />
     <None Remove="View\Assets\Menu\Logo_menu.png" />
   </ItemGroup>
@@ -33,7 +33,7 @@
     <EmbeddedResource Include="View\Assets\Abertura\Logo_abertura.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Assets\Correntista\Banner_Cadastro_Correntista.jpg">
+    <EmbeddedResource Include="View\Assets\Conta\Banner_cadastro_conta.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Assets\Login\Logo_login.png">
@@ -75,5 +75,9 @@
     <EmbeddedResource Update="View\Modules\Login\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="View\Assets\Inicio\" />
   </ItemGroup>
 </Project>
