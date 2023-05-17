@@ -23,12 +23,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="View\Assets\Abertura\Logo_abertura.png" />
     <None Remove="View\Assets\Correntista\Banner_Cadastro_Correntista.jpg" />
     <None Remove="View\Assets\Login\Logo_login.png" />
     <None Remove="View\Assets\Menu\Logo_menu.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="View\Assets\Abertura\Logo_abertura.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Assets\Correntista\Banner_Cadastro_Correntista.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -53,6 +57,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="View\Modules\Abertura\Abertura.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Modules\Conta\Cadastro_Conta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\Modules\Correntista\Cadastro_Correntista.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -23,7 +23,7 @@ namespace App_Banco_Digital
             else
             {
 
-                MainPage = new NavigationPage(new View.Modules.Login.Login());
+                MainPage = new NavigationPage(new View.Modules.Abertura.Abertura());
 
             }
 
