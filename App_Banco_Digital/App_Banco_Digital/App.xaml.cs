@@ -16,7 +16,7 @@ namespace App_Banco_Digital
             if(this.Properties.ContainsKey("logado"))
             {
 
-                MainPage = new NavigationPage(new View.Modules.Inicio.Inicio());
+                MainPage = new View.Modules.Menu.Menu();
 
             }
 

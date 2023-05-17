@@ -12,7 +12,7 @@
 
                 <Frame BackgroundColor="#00AFFF" CornerRadius="150" Grid.Column="1" Grid.Row="0">
 
-                    <Image x:Name="img_logo" Aspect="Fill"/>
+                    <Image x:Name="img_logo_login" Aspect="Fill"/>
 
                 </Frame>
 

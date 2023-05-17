@@ -28,7 +28,7 @@ namespace App_Banco_Digital.View.Modules.Login
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-            img_logo.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Login.Logo.png");
+            img_logo_login.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Login.Logo_login.png");
 
         }
 
@@ -48,18 +48,16 @@ namespace App_Banco_Digital.View.Modules.Login
                     if(lista_correntistas.Any(i => (i.nome == txt_usuario.Text && i.senha_correntista == txt_senha.Text)))
                     {
 
-                        if(chbox_persistencia.IsChecked == true)
+                        await DisplayAlert("Aviso!", "Login efetuado com sucesso. Seja bem-vindo(a)!", "OK");
+
+                        if (chbox_persistencia.IsChecked == true)
                         {
 
                             this.propriedades_aplicacao.Properties.Add("logado", true);
 
-                            this.propriedades_aplicacao.MainPage = new NavigationPage(new Inicio.Inicio());
-
                         }
 
-                        await DisplayAlert("Aviso!", "Login efetuado com sucesso. Seja bem-vindo(a)!", "OK");
-
-                        await Navigation.PushAsync(new Inicio.Inicio());
+                        this.propriedades_aplicacao.MainPage = new Menu.Menu();
 
                     }
 

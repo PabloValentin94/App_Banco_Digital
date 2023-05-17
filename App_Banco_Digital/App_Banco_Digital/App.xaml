@@ -5,6 +5,8 @@
     
     <Application.Resources>
 
+        <!--<Color x:Key="cor_sistema">#00AFFF</Color>-->
+
         <Style x:Key="entry_cadastro" TargetType="Entry">
 
             <Setter Property="TextColor" Value="#000000"/>

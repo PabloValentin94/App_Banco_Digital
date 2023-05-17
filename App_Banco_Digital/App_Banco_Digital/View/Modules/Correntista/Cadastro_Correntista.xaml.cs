@@ -20,7 +20,7 @@ namespace App_Banco_Digital.View.Modules.Correntista
             InitializeComponent();
 
             img_cadastro_correntista.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets." +
-                                              "Correntista.Cadastro_Correntista.jpg");
+                                              "Correntista.Banner_Cadastro_Correntista.jpg");
 
         }
 

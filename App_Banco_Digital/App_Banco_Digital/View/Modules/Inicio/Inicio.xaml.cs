@@ -11,7 +11,7 @@ namespace App_Banco_Digital.View.Modules.Inicio
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Inicio : MasterDetailPage
+    public partial class Inicio : ContentPage
     {
 
         public Inicio()

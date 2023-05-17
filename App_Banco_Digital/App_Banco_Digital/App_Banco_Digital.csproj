@@ -23,15 +23,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="View\Assets\Correntista\Cadastro_Correntista.jpg" />
-    <None Remove="View\Assets\Login\Logo.png" />
+    <None Remove="View\Assets\Correntista\Banner_Cadastro_Correntista.jpg" />
+    <None Remove="View\Assets\Login\Logo_login.png" />
+    <None Remove="View\Assets\Menu\Logo_menu.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="View\Assets\Correntista\Cadastro_Correntista.jpg">
+    <EmbeddedResource Include="View\Assets\Correntista\Banner_Cadastro_Correntista.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Assets\Login\Logo.png">
+    <EmbeddedResource Include="View\Assets\Login\Logo_login.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Assets\Menu\Logo_menu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -43,10 +47,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\Modules\Menu\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="View\Modules\Correntista\Cadastro_Correntista.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Modules\Inicio\Inicio.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Modules\Menu\Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Modules\Login\Login.xaml">
