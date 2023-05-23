@@ -24,6 +24,19 @@ namespace App_Banco_Digital.Service
 
         }
 
+        public static async Task<Conta> RegisterAsync(Conta model)
+        {
+
+            var post_json = JsonConvert.SerializeObject(model);
+
+            string json = await Data_Service.PostDataToService(post_json, "/conta/salvar");
+
+            Conta retorno = JsonConvert.DeserializeObject<Conta>(json);
+
+            return retorno;
+
+        }
+
     }
 
 }

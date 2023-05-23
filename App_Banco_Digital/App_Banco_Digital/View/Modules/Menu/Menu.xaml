@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                  x:Class="App_Banco_Digital.View.Modules.Menu.Menu"
-                  Style="{ StaticResource fundo_paginas }">
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="App_Banco_Digital.View.Modules.Menu.Menu"
+            Style="{ StaticResource fundo_paginas }">
 
-    <MasterDetailPage.Master>
+    <FlyoutPage.Flyout>
 
-        <ContentPage Title="Menu" BackgroundColor="#FFFFFF">
+        <ContentPage Title="Menu" Style="{ StaticResource fundo_paginas }">
 
             <ContentPage.Content>
 
@@ -21,7 +21,7 @@
                     </Frame>
 
                     <Line X1="0" X2="100" Y1="0" Y2="0" Margin="2,0,2,0"
-                          Grid.Row="1" BackgroundColor="#000000"/>
+                          Grid.Row="1" BackgroundColor="#FFFFFF"/>
 
                     <ScrollView Grid.Row="2" BackgroundColor="Transparent">
 
@@ -34,7 +34,7 @@
                     </ScrollView>
 
                     <Line X1="0" X2="100" Y1="0" Y2="0" Margin="2,0,2,0"
-                          Grid.Row="3" BackgroundColor="#000000"/>
+                          Grid.Row="3" BackgroundColor="#FFFFFF"/>
 
                     <Button x:Name="btn_sair" Text="Sair" TextColor="#FFFFFF"
                             Grid.Row="4" CornerRadius="10" FontAttributes="Bold"
@@ -46,9 +46,9 @@
 
         </ContentPage>
 
-    </MasterDetailPage.Master>
+    </FlyoutPage.Flyout>
 
-    <MasterDetailPage.Detail>
+    <FlyoutPage.Detail>
 
         <NavigationPage>
             
@@ -56,6 +56,6 @@
             
         </NavigationPage>
         
-    </MasterDetailPage.Detail>
+    </FlyoutPage.Detail>
     
-</MasterDetailPage>
+</FlyoutPage>

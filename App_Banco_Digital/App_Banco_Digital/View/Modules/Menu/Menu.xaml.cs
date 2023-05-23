@@ -13,10 +13,10 @@ namespace App_Banco_Digital.View.Modules.Menu
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Menu : MasterDetailPage
+    public partial class Menu : FlyoutPage
     {
 
-        App propriedades_aplicativo = (App) Application.Current;
+        //App propriedades_aplicativo = (App) Application.Current;
 
         public Menu()
         {
@@ -35,9 +35,7 @@ namespace App_Banco_Digital.View.Modules.Menu
             if(await DisplayAlert("Atenção!", "Deseja desvincular sua conta?", "Sim", "Não"))
             {
 
-                this.propriedades_aplicativo.Properties.Remove("logado");
-
-                this.propriedades_aplicativo.MainPage = new NavigationPage(new Login.Login());
+                App.Current.MainPage = new NavigationPage(new Abertura.Abertura());
 
             }
 

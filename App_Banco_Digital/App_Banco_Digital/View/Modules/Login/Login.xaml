@@ -16,14 +16,14 @@
 
                 </Frame>
 
-                <StackLayout VerticalOptions="Center" Spacing="20" Margin="0,60,0,0"
+                <StackLayout VerticalOptions="Center" Spacing="20" Margin="0,50,0,0"
                              Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
 
                     <Entry x:Name="txt_usuario" Placeholder="Insira seu usuário aqui"
                            Keyboard="Text" ClearButtonVisibility="WhileEditing"
                            Style="{ StaticResource entry_cadastro }"/>
 
-                    <StackLayout Spacing="0">
+                    <StackLayout Spacing="0" Margin="0">
 
                         <Entry x:Name="txt_senha" Placeholder="Insira sua senha aqui"
                                Keyboard="Text" IsPassword="True"
@@ -31,30 +31,21 @@
                                Style="{ StaticResource entry_cadastro }"/>
 
                         <Button x:Name="btn_mostrar_ocultar_senha" Text="Exibir senha"
-                                BackgroundColor="Transparent" TextColor="#000000"
+                                BackgroundColor="Transparent" TextColor="#FFFFFF"
                                 HorizontalOptions="End" FontSize="12" FontAttributes="Bold"
                                 Clicked="btn_mostrar_ocultar_senha_Clicked"/>
 
                     </StackLayout>
 
-                    <Grid ColumnDefinitions="Auto, *, Auto">
-
-                        <CheckBox x:Name="chbox_persistencia" Grid.Column="0"/>
-
-                        <Label Text="Manter-se conectado?" Grid.Column="1" TextColor="#000000"
-                               VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
-
-                        <ActivityIndicator x:Name="actInd_buscando_usuarios"
-                                           Grid.Column="2" Color="#00AFFF"
-                                           IsRunning="False" HorizontalOptions="End"/>
-
-                    </Grid>
+                    <ActivityIndicator x:Name="actInd_buscando_usuarios"
+                                       Grid.Column="2" Color="#00AFFF"
+                                       IsRunning="False" HorizontalOptions="Center"/>
 
                     <Button x:Name="btn_entrar" Text="ENTRAR" Margin="0,30,0,0"
                             BackgroundColor="#00AFFF" Clicked="btn_entrar_Clicked"
                             CornerRadius="10" TextColor="#FFFFFF" FontAttributes="Bold"/>
 
-                    <Button x:Name="btn_redirecionar_cadastro_conta" TextColor="#000000"
+                    <Button x:Name="btn_redirecionar_cadastro_conta" TextColor="#FFFFFF"
                             Text="Clique aqui, caso ainda não possua um cadastro."
                             BackgroundColor="Transparent" FontSize="10"
                             FontAttributes="Italic"

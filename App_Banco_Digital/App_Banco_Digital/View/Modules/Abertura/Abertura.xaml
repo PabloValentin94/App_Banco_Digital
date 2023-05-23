@@ -11,18 +11,22 @@
             <Grid RowDefinitions="150, Auto" VerticalOptions="Center"
                   Padding="40">
 
-                <Image x:Name="img_logo_abertura" Aspect="AspectFit"
-                       Grid.Row="0"/>
+                <Frame Grid.Row="0" CornerRadius="20" Padding="5"
+                       HorizontalOptions="Center" BorderColor="#00AFFF">
+
+                    <Image x:Name="img_logo_abertura" Aspect="AspectFit"/>
+
+                </Frame>
 
                 <StackLayout VerticalOptions="Center" Grid.Row="1"
                              Spacing="15" Margin="0,30,0,0">
 
                     <Label x:Name="lbl_saudacao" Text="Bem-vindo(a) ao Banco Pan."
-                           TextColor="#000000" FontSize="30"/>
+                           TextColor="#FFFFFF" FontSize="30"/>
 
                     <Button x:Name="btn_criar_conta" Text="Abrir conta"
-                            BackgroundColor="#00AFFF" CornerRadius="10"
-                            TextColor="#FFFFFF" Clicked="btn_criar_conta_Clicked"/>
+                            Style="{ StaticResource botao_principal }"
+                            Clicked="btn_criar_conta_Clicked"/>
 
                     <Button x:Name="btn_login" Text="Já sou cliente"
                             BackgroundColor="#FFFFFF" CornerRadius="10"

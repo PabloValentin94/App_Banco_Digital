@@ -18,6 +18,8 @@ namespace App_Banco_Digital.Model
 
         public bool ativa { get; set; }
 
+        public int fk_correntista { get; set; }
+
     }
 
 }
