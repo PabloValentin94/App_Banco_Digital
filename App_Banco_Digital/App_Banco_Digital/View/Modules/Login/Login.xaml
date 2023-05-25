@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Banco_Digital.View.Modules.Login.Login"
+             Title="Login"
              Style="{ StaticResource fundo_paginas }">
 
     <ContentPage.Content>
@@ -21,14 +22,15 @@
 
                     <Entry x:Name="txt_usuario" Placeholder="Insira seu usuário aqui"
                            Keyboard="Text" ClearButtonVisibility="WhileEditing"
-                           Style="{ StaticResource entry_cadastro }"/>
+                           TextColor="#FFFFFF"/>
 
                     <StackLayout Spacing="0" Margin="0">
 
                         <Entry x:Name="txt_senha" Placeholder="Insira sua senha aqui"
                                Keyboard="Text" IsPassword="True"
                                ClearButtonVisibility="WhileEditing"
-                               Style="{ StaticResource entry_cadastro }"/>
+                               Style="{ StaticResource entry_cadastro }"
+                               TextColor="#FFFFFF"/>
 
                         <Button x:Name="btn_mostrar_ocultar_senha" Text="Exibir senha"
                                 BackgroundColor="Transparent" TextColor="#FFFFFF"

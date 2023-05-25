@@ -31,14 +31,14 @@ namespace App_Banco_Digital.View.Modules.Abertura
         private async void btn_criar_conta_Clicked(object sender, EventArgs e)
         {
 
-            await Navigation.PushAsync(new NavigationPage(new Conta.Cadastro_Conta()));
+            await Navigation.PushAsync(new Conta.Cadastro_Conta());
 
         }
 
         private async void btn_login_Clicked(object sender, EventArgs e)
         {
 
-            await Navigation.PushAsync(new NavigationPage(new Login.Login()));
+            await Navigation.PushAsync(new Login.Login());
 
         }
 

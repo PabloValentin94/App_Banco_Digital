@@ -8,8 +8,7 @@
 
         <ScrollView>
 
-            <Grid RowDefinitions="150, Auto" VerticalOptions="Center"
-                  Padding="40">
+            <Grid RowDefinitions="150, Auto" VerticalOptions="Center" Padding="40">
 
                 <Frame Grid.Row="0" CornerRadius="20" Padding="5"
                        HorizontalOptions="Center" BorderColor="#00AFFF">

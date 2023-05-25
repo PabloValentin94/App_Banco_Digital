@@ -15,7 +15,7 @@ namespace App_Banco_Digital.View.Modules.Conta
     public partial class Cadastro_Conta : ContentPage
     {
 
-        Random gerador_numeros = new Random();
+        //Random gerador_numeros = new Random();
 
         string[] tipos_conta = {"Selecione o tipo da sua conta bancária", "Conta Corrente"};
 
@@ -29,7 +29,7 @@ namespace App_Banco_Digital.View.Modules.Conta
 
             pck_tipo_conta.ItemsSource = this.tipos_conta;
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            //NavigationPage.SetHasNavigationBar(this, false);
 
         }
 
@@ -42,21 +42,21 @@ namespace App_Banco_Digital.View.Modules.Conta
                 Model.Conta dados = new Model.Conta()
                 {
 
-                    numero = gerador_numeros.Next(1, 100),
+                    numero = 1,
 
                     tipo = pck_tipo_conta.SelectedItem.ToString(),
 
                     senha_conta = txt_senha_conta.Text,
 
-                    ativa = true
+                    ativa = true,
+
+                    fk_correntista = 1
 
                 };
 
-                dados.fk_correntista = dados.numero;
+                var retorno = await Data_Service_Conta.RegisterAsync(dados);
 
-                await Data_Service_Conta.RegisterAsync(dados);
-
-                if(dados.id_conta != null)
+                if(retorno.id_conta != null)
                 {
 
                     await Navigation.PopAsync();

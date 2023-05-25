@@ -26,7 +26,7 @@ namespace App_Banco_Digital.View.Modules.Login
 
             //this.propriedades_aplicacao = (App) Application.Current;
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            //NavigationPage.SetHasNavigationBar(this, false);
 
             img_logo_login.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Login.Logo_login.png");
 

@@ -25,6 +25,7 @@
 
             <Setter Property="TextColor" Value="#000000"/>
             <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="PlaceholderColor" Value="#808080"/>
 
         </Style>
 
