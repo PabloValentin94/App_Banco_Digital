@@ -38,7 +38,11 @@ namespace App_Banco_Digital.Service
 
                     HttpResponseMessage resposta = await cliente.GetAsync(uri);
 
-                    if(resposta.IsSuccessStatusCode)
+                    Console.WriteLine("_______________________________");
+                    Console.WriteLine(resposta.Content.ReadAsStringAsync().Result);
+                    Console.WriteLine("_______________________________");
+
+                    if (resposta.IsSuccessStatusCode)
                     {
 
                         resposta_json = resposta.Content.ReadAsStringAsync().Result;
@@ -121,6 +125,10 @@ namespace App_Banco_Digital.Service
                     HttpResponseMessage resposta = await cliente.PostAsync(uri,
                                                    new StringContent(objeto_json, Encoding.UTF8,
                                                    "application/json"));
+
+                    Console.WriteLine("_______________________________");
+                    Console.WriteLine(resposta.Content.ReadAsStringAsync().Result);
+                    Console.WriteLine("_______________________________");
 
                     if (resposta.IsSuccessStatusCode)
                     {
