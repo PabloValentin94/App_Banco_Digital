@@ -17,29 +17,27 @@
 
             </Frame>
 
-            <Frame CornerRadius="10" Margin="0,15,0,0" Grid.Row="1">
+            <ScrollView Grid.Row="1">
 
-                <ScrollView>
+                <StackLayout VerticalOptions="Center" Padding="10" Spacing="10">
 
-                    <StackLayout VerticalOptions="Center" Spacing="10">
-
-                        <!--<Label Text="Número" Style="{ StaticResource label_cadastro }"/>
+                    <!--<Label Text="Número" Style="{ StaticResource label_cadastro }"/>
                         <Entry x:Name="txt_numero_conta" Keyboard="Numeric"
                                Style="{ StaticResource entry_cadastro }"/>-->
 
-                        <Label Text="Nome de Usuário:" Style="{ StaticResource label_cadastro }"/>
-                        <Entry x:Name="txt_nome_usuario_conta" Keyboard="Text"
-                               Style="{ StaticResource entry_cadastro }"/>
+                    <Label Text="Nome de Usuário:" Style="{ StaticResource label_cadastro }"/>
+                    <Entry x:Name="txt_nome_usuario_conta" Keyboard="Text"
+                           Style="{ StaticResource entry_cadastro }"/>
 
-                        <Label Text="Tipo:" Style="{ StaticResource label_cadastro }"/>
-                        <Picker x:Name="pck_tipo_conta" TextColor="#000000"
-                                HorizontalTextAlignment="Center"/>
+                    <Label Text="Tipo:" Style="{ StaticResource label_cadastro }"/>
+                    <Picker x:Name="pck_tipo_conta" TextColor="#000000"
+                            HorizontalTextAlignment="Center"/>
 
-                        <Label Text="Senha:" Style="{ StaticResource label_cadastro }"/>
-                        <Entry x:Name="txt_senha_conta" Keyboard="Text"
-                               Style="{ StaticResource entry_cadastro }"/>
+                    <Label Text="Senha:" Style="{ StaticResource label_cadastro }"/>
+                    <Entry x:Name="txt_senha_conta" Keyboard="Text"
+                           Style="{ StaticResource entry_cadastro }"/>
 
-                        <!--<Label Text="Ativo:" Style="{ StaticResource label_cadastro }"/>
+                    <!--<Label Text="Ativo:" Style="{ StaticResource label_cadastro }"/>
                         <Grid RadioButtonGroup.GroupName="opcoes" ColumnDefinitions="*,*">
 
                             <RadioButton Content="Ativo" GroupName="opcoes"
@@ -50,15 +48,13 @@
 
                         </Grid>-->
 
-                        <Button x:Name="btn_cadastrar_conta" Text="Cadastrar"
-                                Margin="0,20,0,0" Style="{ StaticResource botao_principal }"
-                                Clicked="btn_cadastrar_conta_Clicked"/>
+                    <Button x:Name="btn_cadastrar_conta" Text="Cadastrar"
+                            Margin="0,20,0,0" Style="{ StaticResource botao_principal }"
+                            Clicked="btn_cadastrar_conta_Clicked"/>
 
-                    </StackLayout>
+                </StackLayout>
 
-                </ScrollView>
-
-            </Frame>
+            </ScrollView>
 
         </Grid>
 

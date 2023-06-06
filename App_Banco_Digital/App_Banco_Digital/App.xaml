@@ -9,7 +9,7 @@
 
         <Style x:Key="fundo_paginas" TargetType="Page">
 
-            <Setter Property="BackgroundColor" Value="#2F2F36"/>
+            <Setter Property="BackgroundColor" Value="#FFFFFF"/>
 
         </Style>
 

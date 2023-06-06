@@ -21,7 +21,7 @@
                     </Frame>
 
                     <Line X1="0" X2="100" Y1="0" Y2="0" Margin="2,0,2,0"
-                          Grid.Row="1" BackgroundColor="#FFFFFF"/>
+                          Grid.Row="1" BackgroundColor="#000000"/>
 
                     <ScrollView Grid.Row="2" BackgroundColor="Transparent">
 
@@ -34,7 +34,7 @@
                     </ScrollView>
 
                     <Line X1="0" X2="100" Y1="0" Y2="0" Margin="2,0,2,0"
-                          Grid.Row="3" BackgroundColor="#FFFFFF"/>
+                          Grid.Row="3" BackgroundColor="#000000"/>
 
                     <Button x:Name="btn_sair" Text="Sair" TextColor="#FFFFFF"
                             Grid.Row="4" CornerRadius="10" FontAttributes="Bold"

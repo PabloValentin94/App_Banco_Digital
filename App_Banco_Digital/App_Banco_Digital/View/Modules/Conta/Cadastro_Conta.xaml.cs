@@ -39,7 +39,7 @@ namespace App_Banco_Digital.View.Modules.Conta
             try
             {
 
-                Model.Conta dados = new Model.Conta()
+                Model.Conta conta = new Model.Conta()
                 {
 
                     numero = 1,
@@ -54,10 +54,12 @@ namespace App_Banco_Digital.View.Modules.Conta
 
                 };
 
-                var retorno = await Data_Service_Conta.RegisterAsync(dados);
+                var retorno = await Data_Service_Conta.RegisterAsync(conta);
 
                 if(retorno.id_conta != null)
                 {
+
+                    await DisplayAlert("Atenção!", "Conta cadastrada com sucesso.", "OK");
 
                     await Navigation.PopAsync();
 

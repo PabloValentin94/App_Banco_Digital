@@ -17,30 +17,59 @@
 
     <ContentPage.Content>
 
-        <ScrollView>
+        <Grid RowDefinitions="250,*" Padding="10" RowSpacing="10">
 
-            <StackLayout Padding="0">
+            <Frame CornerRadius="0" Padding="5" Grid.Row="0"
+                   BorderColor="#FFFFFF" BackgroundColor="Transparent">
 
-                <Grid RowDefinitions="200, Auto" Margin="0">
+                <Image x:Name="img_banner_cadastro_correntista"
+                       Margin="0" Aspect="AspectFit"/>
 
-                    <Frame Grid.Row="0" Padding="0">
+            </Frame>
 
-                        <Image x:Name="img_cadastro_correntista" Aspect="Fill" Margin="0"/>
+            <ScrollView Grid.Row="1">
 
-                    </Frame>
+                <StackLayout VerticalOptions="Center" Padding="10" Spacing="10">
 
-                    <StackLayout Grid.Row="1" Margin="15,0,15,0"
-                                 VerticalOptions="CenterAndExpand">
-                        
-                        
-                        
-                    </StackLayout>
-                    
-                </Grid>
+                    <!--<Label Text="Número" Style="{ StaticResource label_cadastro }"/>
+                        <Entry x:Name="txt_numero_conta" Keyboard="Numeric"
+                               Style="{ StaticResource entry_cadastro }"/>-->
 
-            </StackLayout>
+                    <Label Text="Nome Completo:" Style="{ StaticResource label_cadastro }"/>
+                    <Entry x:Name="txt_nome_completo_correntista" Keyboard="Text"
+                           Style="{ StaticResource entry_cadastro }"/>
 
-        </ScrollView>
+                    <Label Text="CPF:" Style="{ StaticResource label_cadastro }"/>
+                    <Entry x:Name="txt_cpf_correntista" Keyboard="Text"
+                           Style="{ StaticResource entry_cadastro }"/>
+
+                    <Label Text="Data de Nascimento:" Style="{ StaticResource label_cadastro }"/>
+                    <DatePicker x:Name="dtpck_data_nascimento_correntista" Format="dd/MM/yyyy" HorizontalOptions="CenterAndExpand"/>
+
+                    <Label Text="Senha:" Style="{ StaticResource label_cadastro }"/>
+                    <Entry x:Name="txt_senha_correntista" Keyboard="Text"
+                           Style="{ StaticResource entry_cadastro }"/>
+
+                    <!--<Label Text="Ativo:" Style="{ StaticResource label_cadastro }"/>
+                        <Grid RadioButtonGroup.GroupName="opcoes" ColumnDefinitions="*,*">
+
+                            <RadioButton Content="Ativo" GroupName="opcoes"
+                                         Grid.Column="0" HorizontalOptions="Center"/>
+
+                            <RadioButton Content="Inativo" GroupName="opcoes"
+                                         Grid.Column="1" HorizontalOptions="Center"/>
+
+                        </Grid>-->
+
+                    <Button x:Name="btn_cadastrar_correntista" Text="Cadastrar"
+                            Margin="0,20,0,0" Style="{ StaticResource botao_principal }"
+                            Clicked="btn_cadastrar_correntista_Clicked"/>
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </Grid>
 
     </ContentPage.Content>
     
