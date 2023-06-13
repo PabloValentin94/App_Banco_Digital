@@ -5,38 +5,7 @@
     
     <Application.Resources>
 
-        <!--<Color x:Key="cor_sistema">#00AFFF</Color>-->
-
-        <Style x:Key="fundo_paginas" TargetType="Page">
-
-            <Setter Property="BackgroundColor" Value="#FFFFFF"/>
-
-        </Style>
-
-        <Style x:Key="botao_principal" TargetType="Button">
-
-            <Setter Property="TextColor" Value="#FFFFFF"/>
-            <Setter Property="CornerRadius" Value="10"/>
-            <Setter Property="BackgroundColor" Value="#00AFFF"/>
-
-        </Style>
-
-        <Style x:Key="entry_cadastro" TargetType="Entry">
-
-            <Setter Property="TextColor" Value="#000000"/>
-            <Setter Property="HorizontalTextAlignment" Value="Center"/>
-            <Setter Property="PlaceholderColor" Value="#808080"/>
-
-        </Style>
-
-        <Style x:Key="label_cadastro" TargetType="Label">
-
-            <Setter Property="TextColor" Value="#000000"/>
-            <Setter Property="HorizontalTextAlignment" Value="Center"/>
-            <Setter Property="FontAttributes" Value="Bold"/>
-            <Setter Property="FontSize" Value="17"/>
-
-        </Style>
+        
 
     </Application.Resources>
     

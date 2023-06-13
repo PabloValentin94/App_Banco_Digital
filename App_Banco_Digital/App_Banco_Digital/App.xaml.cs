@@ -15,7 +15,7 @@ namespace App_Banco_Digital
 
             InitializeComponent();
 
-            MainPage = new NavigationPage(new View.Modules.Abertura.Abertura());
+            //MainPage = 
 
         }
 

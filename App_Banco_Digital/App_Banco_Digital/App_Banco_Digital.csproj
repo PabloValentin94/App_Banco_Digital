@@ -11,77 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="View\Conta\**" />
-    <Compile Remove="View\Login\**" />
-    <Compile Remove="View\Pages\**" />
-    <EmbeddedResource Remove="View\Conta\**" />
-    <EmbeddedResource Remove="View\Login\**" />
-    <EmbeddedResource Remove="View\Pages\**" />
-    <None Remove="View\Conta\**" />
-    <None Remove="View\Login\**" />
-    <None Remove="View\Pages\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="View\Assets\Abertura\Logo_abertura.png" />
-    <None Remove="View\Assets\Conta\Banner_Cadastro_Conta.jpg" />
-    <None Remove="View\Assets\Correntista\Banner_Cadastro_Correntista.jpg" />
-    <None Remove="View\Assets\Login\Logo_login.png" />
-    <None Remove="View\Assets\Menu\Logo_menu.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="View\Assets\Abertura\Logo_abertura.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Assets\Conta\Banner_cadastro_conta.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Assets\Correntista\Banner_Cadastro_Correntista.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Assets\Login\Logo_login.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Assets\Menu\Logo_menu.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="View\Modules\Menu\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="View\Modules\Abertura\Abertura.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Conta\Cadastro_Conta.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Correntista\Cadastro_Correntista.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Inicio\Inicio.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Menu\Menu.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Login\Login.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="View\Assets\Inicio\" />
   </ItemGroup>
 </Project>

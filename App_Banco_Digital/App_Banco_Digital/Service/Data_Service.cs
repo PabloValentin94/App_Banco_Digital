@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 
 using System.Threading.Tasks;
-using System.Net.Http;
-
 using Xamarin.Essentials;
 using System.Net;
+using System.Net.Http;
 
 namespace App_Banco_Digital.Service
 {
@@ -14,14 +13,14 @@ namespace App_Banco_Digital.Service
     public abstract class Data_Service
     {
 
-        private static readonly string servidor = "http://10.0.2.2:8000";
+        private static readonly string host = "http://10.0.2.2:8000";
 
-        protected static async Task<string> GetDataFromService(string rota)
+        protected static async Task<string> GetDataApi(string rota)
         {
 
-            string resposta_json;
+            string json;
 
-            string uri = servidor + rota;
+            string uri = host + rota;
 
             if(Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
@@ -33,26 +32,26 @@ namespace App_Banco_Digital.Service
             else
             {
 
-                using (HttpClient cliente = new HttpClient())
+                using(HttpClient cliente = new HttpClient())
                 {
 
-                    HttpResponseMessage resposta = await cliente.GetAsync(uri);
+                    HttpResponseMessage requisicao_api = await cliente.GetAsync(uri);
 
                     Console.WriteLine("_______________________________");
-                    Console.WriteLine(resposta.Content.ReadAsStringAsync().Result);
+                    Console.WriteLine(requisicao_api.Content.ReadAsStringAsync().Result);
                     Console.WriteLine("_______________________________");
 
-                    if (resposta.IsSuccessStatusCode)
+                    if(requisicao_api.IsSuccessStatusCode)
                     {
 
-                        resposta_json = resposta.Content.ReadAsStringAsync().Result;
+                        json = requisicao_api.Content.ReadAsStringAsync().Result;
 
                     }
 
                     else
                     {
 
-                        throw new Exception(DecodeServerError(resposta.StatusCode));
+                        throw new Exception(ServerErrorValidation(requisicao_api.StatusCode));
 
                     }
 
@@ -60,11 +59,61 @@ namespace App_Banco_Digital.Service
 
             }
 
-            return resposta_json;
+            return json;
 
         }
 
-        private static string DecodeServerError(HttpStatusCode status_code)
+        protected static async Task<string> SendDataApi(string objeto_json, string rota)
+        {
+
+            string json;
+
+            string uri = host + rota;
+
+            if(Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+
+                throw new Exception("Erro detectado! Certifique-se de estar conectado à internet.");
+
+            }
+
+            else
+            {
+
+                using(HttpClient cliente = new HttpClient())
+                {
+
+                    HttpResponseMessage requisicao_api = await cliente.PostAsync(uri,
+                                                   new StringContent(objeto_json, Encoding.UTF8,
+                                                   "application/json"));
+
+                    Console.WriteLine("_______________________________");
+                    Console.WriteLine(requisicao_api.Content.ReadAsStringAsync().Result);
+                    Console.WriteLine("_______________________________");
+
+                    if(requisicao_api.IsSuccessStatusCode)
+                    {
+
+                        json = requisicao_api.Content.ReadAsStringAsync().Result;
+
+                    }
+
+                    else
+                    {
+
+                        throw new Exception(ServerErrorValidation(requisicao_api.StatusCode));
+
+                    }
+
+                }
+
+            }
+
+            return json;
+
+        }
+
+        private static string ServerErrorValidation(HttpStatusCode status_code)
         {
 
             string mensagem_erro;
@@ -99,56 +148,6 @@ namespace App_Banco_Digital.Service
             }
 
             return mensagem_erro;
-
-        }
-
-        protected static async Task<string> PostDataToService(string objeto_json, string rota)
-        {
-
-            string resposta_json;
-
-            string uri = servidor + rota;
-
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
-            {
-
-                throw new Exception("Erro detectado! Certifique-se de estar conectado à internet.");
-
-            }
-
-            else
-            {
-
-                using (HttpClient cliente = new HttpClient())
-                {
-
-                    HttpResponseMessage resposta = await cliente.PostAsync(uri,
-                                                   new StringContent(objeto_json, Encoding.UTF8,
-                                                   "application/json"));
-
-                    Console.WriteLine("_______________________________");
-                    Console.WriteLine(resposta.Content.ReadAsStringAsync().Result);
-                    Console.WriteLine("_______________________________");
-
-                    if (resposta.IsSuccessStatusCode)
-                    {
-
-                        resposta_json = resposta.Content.ReadAsStringAsync().Result;
-
-                    }
-
-                    else
-                    {
-
-                        throw new Exception(DecodeServerError(resposta.StatusCode));
-
-                    }
-
-                }
-
-            }
-
-            return resposta_json;
 
         }
 
