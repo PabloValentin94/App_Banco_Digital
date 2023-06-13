@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Banco_Digital.LoginCorrentista"
+             Style="{ StaticResource Estilo_Digio }">
+
+    <ContentPage.Resources>
+
+        <ResourceDictionary>
+
+            <Style x:Key="Titulos_Login_Correntista" TargetType="Label">
+
+                <Setter Property="TextColor" Value="#FFFF00"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Large"/>
+
+            </Style>
+
+            <Style x:Key="Campos_Login_Correntista" TargetType="Entry">
+
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="ClearButtonVisibility" Value="WhileEditing"/>
+                <Setter Property="Keyboard" Value="Text"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+
+            </Style>
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <ScrollView Padding="20">
+
+            <Grid ColumnDefinitions="*,200,*" RowDefinitions="200,300"
+                  VerticalOptions="Center" RowSpacing="20">
+
+                <Frame Grid.Column="1" Grid.Row="0" BackgroundColor="#FFFFFF" CornerRadius="100">
+
+                    <Image x:Name="img_logo" Aspect="Fill"/>
+
+                </Frame>
+
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                             Margin="0,20,0,0">
+
+                    <Label Text="Usuário:" Style="{ StaticResource Titulos_Login_Correntista }"/>
+                    <Entry x:Name="txt_usuario" Style="{ StaticResource Campos_Login_Correntista }"/>
+
+                    <Label Text="Senha:" Style="{ StaticResource Titulos_Login_Correntista }"/>
+                    <Entry x:Name="txt_senha" Style="{ StaticResource Campos_Login_Correntista }"/>
+
+                    <Button x:Name="btn_login" BackgroundColor="Transparent" TextColor="#FFFFFF"
+                            Text="Entrar" CornerRadius="10" BorderColor="#FFFFFF"
+                            BorderWidth="3" Clicked="btn_login_Clicked" Margin="0,20,0,0"/>
+
+                </StackLayout>
+
+            </Grid>
+            
+        </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

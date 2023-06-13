@@ -16,9 +16,9 @@
 			 which is used to tint widgets -->
 		<!--<item name="colorAccent">#FF4081</item>-->
 
-		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimary">@color/colorDigio</item>
 
-		<item name="colorPrimaryDark">@color/colorAccent</item>
+		<item name="colorPrimaryDark">@color/colorDigio</item>
 
 		<item name="colorAccent">@color/colorAccent</item>
 
@@ -30,13 +30,13 @@
 
 	<style name="DatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
 
-		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorAccent">@color/colorDigio</item>
 		
 	</style>
 
 	<style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
 
-		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorAccent">@color/colorDigio</item>
 
 	</style>
 	

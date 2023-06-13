@@ -5,7 +5,11 @@
     
     <Application.Resources>
 
-        
+        <Style x:Key="Estilo_Digio" TargetType="Page">
+
+            <Setter Property="BackgroundColor" Value="#00285F"/>
+
+        </Style>
 
     </Application.Resources>
     
