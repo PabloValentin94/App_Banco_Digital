@@ -14436,10 +14436,10 @@ namespace App_Banco_Digital.Droid
 			public const int checkbox_themeable_attribute_color = 2131034161;
 			
 			// aapt resource value: 0x7F050032
-			public const int colorAccent = 2131034162;
+			public const int colorDigio = 2131034162;
 			
 			// aapt resource value: 0x7F050033
-			public const int colorDigio = 2131034163;
+			public const int colorNavigationBar = 2131034163;
 			
 			// aapt resource value: 0x7F050034
 			public const int design_bottom_navigation_shadow_color = 2131034164;

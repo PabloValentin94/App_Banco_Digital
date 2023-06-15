@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Banco_Digital.View.Modules.Outros.Home"
+             Style="{ StaticResource Estilo_Digio }">
+
+    <ContentPage.ToolbarItems>
+
+        <!--<ToolbarItem x:Name="btn_menu" Priority="0" Order="Primary"/>-->
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        
+        <StackLayout>
+            
+            
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

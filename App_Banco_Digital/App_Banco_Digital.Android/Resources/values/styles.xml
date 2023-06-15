@@ -16,11 +16,11 @@
 			 which is used to tint widgets -->
 		<!--<item name="colorAccent">#FF4081</item>-->
 
-		<item name="colorPrimary">@color/colorDigio</item>
+		<item name="colorPrimary">@color/colorNavigationBar</item>
 
 		<item name="colorPrimaryDark">@color/colorDigio</item>
 
-		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorAccent">@color/colorDigio</item>
 
 		<item name="android:datePickerDialogTheme">@style/DatePickerTheme</item>
 

@@ -2,9 +2,11 @@
 <resources>
 	
     <color name="launcher_background">#FFFFFF</color>
+
+	<color name="colorNavigationBar">#FFFFFF</color>
 	
     <color name="colorDigio">#00285F</color>
-	
-    <color name="colorAccent">#03E2E5</color>
+
+	<!--<color name="colorAccent">#03E2E5</color>-->
 	
 </resources>

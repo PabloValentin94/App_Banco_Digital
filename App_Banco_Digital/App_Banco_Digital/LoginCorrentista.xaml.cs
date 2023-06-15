@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using App_Banco_Digital.View;
 using App_Banco_Digital.Model;
 using App_Banco_Digital.Service;
 
@@ -45,6 +46,8 @@ namespace App_Banco_Digital
                     {
 
                         await DisplayAlert("Atenção!", "Login efetuado com sucesso.", "OK");
+
+                        App.Current.MainPage = new NavigationPage(new View.Modules.Outros.Home());
 
                     }
 
