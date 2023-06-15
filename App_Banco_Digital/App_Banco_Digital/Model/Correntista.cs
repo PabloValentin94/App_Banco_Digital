@@ -18,7 +18,7 @@ namespace App_Banco_Digital.Model
 
         public string senha_correntista { get; set; }
 
-        public bool ativo { get; set; }
+        public bool ativo { get; set; } = true;
 
     }
 

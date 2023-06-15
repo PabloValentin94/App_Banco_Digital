@@ -23,14 +23,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\Assets\LoginCorrentista\" />
-    <Folder Include="View\Modules\Correntista\" />
-    <Folder Include="View\Modules\Conta\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="LoginCorrentista.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\Modules\Correntista\CadastroCorrentista.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="View\Modules\Outros\" />
   </ItemGroup>
 </Project>

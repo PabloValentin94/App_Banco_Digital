@@ -15,7 +15,7 @@ namespace App_Banco_Digital
 
             InitializeComponent();
 
-            MainPage = new LoginCorrentista();
+            MainPage = new NavigationPage(new LoginCorrentista());
 
         }
 

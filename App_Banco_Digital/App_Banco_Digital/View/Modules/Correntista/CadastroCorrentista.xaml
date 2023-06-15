@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Banco_Digital.View.Modules.Correntista.CadastroCorrentista">
+    
+    <ContentPage.Content>
+        
+        <ScrollView Padding="20">
+
+            <Grid RowDefinitions="*,100">
+
+                <StackLayout Grid.Row="0">
+
+                    <Label Text="Cadastre-se:" FontSize="40"
+                           Style="{ StaticResource Titulos_Cadastros }"/>
+
+                    <Line X1="0" X2="1000" Y1="0" Y2="0"
+                          Stroke="#000000" Margin="0,0,0,20"/>
+
+                    <StackLayout>
+
+                        <Label Text="Nome:" Style="{ StaticResource Titulos_Cadastros }"/>
+                        <Entry x:Name="txt_nome_correntista" Placeholder="Crie um nome de usuário"
+                               Style="{ StaticResource Campos_Cadastros }"/>
+
+                        <Label Text="CPF:" Style="{ StaticResource Titulos_Cadastros }"/>
+                        <Entry x:Name="txt_cpf_correntista" Placeholder="Insira seu CPF"
+                               Style="{ StaticResource Campos_Cadastros }"/>
+
+                        <Label Text="Data de Nascimento:" Style="{ StaticResource Titulos_Cadastros }"/>
+                        <DatePicker x:Name="dtpck_data_nascimento_correntista" Format="dd/MM/yyyy"/>
+
+                        <Label Text="Senha:" Style="{ StaticResource Titulos_Cadastros }"/>
+                        <Entry x:Name="txt_senha_correntista" Placeholder="Crie uma senha"
+                               Style="{ StaticResource Campos_Cadastros }"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" VerticalOptions="Center">
+
+                    <Button x:Name="btn_cadastrar_correntista" Text="Cadastrar"
+                            Clicked="btn_cadastrar_correntista_Clicked"
+                            Style="{ StaticResource Botoes_Cadastros }"/>
+
+                </StackLayout>
+
+            </Grid>
+
+        </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

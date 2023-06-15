@@ -23,6 +23,18 @@
                 <Setter Property="ClearButtonVisibility" Value="WhileEditing"/>
                 <Setter Property="Keyboard" Value="Text"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="PlaceholderColor" Value="#808080"/>
+
+            </Style>
+
+            <Style x:Key="Botoes_Login_Correntista" TargetType="Button">
+
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderWidth" Value="3"/>
+                <Setter Property="BorderColor" Value="#FFFFFF"/>
+                <Setter Property="Margin" Value="0,20,0,0"/>
 
             </Style>
             
@@ -34,27 +46,32 @@
 
         <ScrollView Padding="20">
 
-            <Grid ColumnDefinitions="*,200,*" RowDefinitions="200,300"
-                  VerticalOptions="Center" RowSpacing="20">
+            <Grid ColumnDefinitions="*,200,*" RowDefinitions="200,400" VerticalOptions="Center">
 
-                <Frame Grid.Column="1" Grid.Row="0" BackgroundColor="#FFFFFF" CornerRadius="100">
+                <Frame Grid.Column="1" Grid.Row="0" BackgroundColor="#FFFFFF"
+                       CornerRadius="100" BorderColor="#03E2E5">
 
                     <Image x:Name="img_logo" Aspect="Fill"/>
 
                 </Frame>
 
-                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
-                             Margin="0,20,0,0">
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="Center">
 
                     <Label Text="Usuário:" Style="{ StaticResource Titulos_Login_Correntista }"/>
-                    <Entry x:Name="txt_usuario" Style="{ StaticResource Campos_Login_Correntista }"/>
+                    <Entry x:Name="txt_usuario" Placeholder="Insira seu nome de usuário aqui"
+                           Style="{ StaticResource Campos_Login_Correntista }"/>
 
                     <Label Text="Senha:" Style="{ StaticResource Titulos_Login_Correntista }"/>
-                    <Entry x:Name="txt_senha" Style="{ StaticResource Campos_Login_Correntista }"/>
+                    <Entry x:Name="txt_senha" Placeholder="Insira sua senha aqui"
+                           Style="{ StaticResource Campos_Login_Correntista }"/>
 
-                    <Button x:Name="btn_login" BackgroundColor="Transparent" TextColor="#FFFFFF"
-                            Text="Entrar" CornerRadius="10" BorderColor="#FFFFFF"
-                            BorderWidth="3" Clicked="btn_login_Clicked" Margin="0,20,0,0"/>
+                    <Button x:Name="btn_login" Text="Entrar" BorderColor="#03E2E5"
+                            Clicked="btn_login_Clicked" Margin="0,35,0,0"
+                            Style="{ StaticResource Botoes_Login_Correntista }"/>
+
+                    <Button x:Name="btn_cadastrar_correntista" Text="Criar Conta"
+                            Clicked="btn_cadastrar_correntista_Clicked"
+                            Style="{ StaticResource Botoes_Login_Correntista }"/>
 
                 </StackLayout>
 
