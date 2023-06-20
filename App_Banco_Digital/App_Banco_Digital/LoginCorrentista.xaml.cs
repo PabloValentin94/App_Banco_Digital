@@ -102,6 +102,29 @@ namespace App_Banco_Digital
 
         }
 
+        private void btn_senha_Clicked(object sender, EventArgs e)
+        {
+
+            if(txt_senha.IsPassword)
+            {
+
+                txt_senha.IsPassword = false;
+
+                btn_senha.Text = "Ocultar senha";
+
+            }
+
+            else
+            {
+
+                txt_senha.IsPassword = true;
+
+                btn_senha.Text = "Exibir senha";
+
+            }
+
+        }
+
     }
 
 }

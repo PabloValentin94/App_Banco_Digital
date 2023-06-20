@@ -68,10 +68,15 @@
 
                     <Label Text="Senha:" Style="{ StaticResource Titulos_Login_Correntista }"/>
                     <Entry x:Name="txt_senha" Placeholder="Insira sua senha aqui"
-                           Style="{ StaticResource Campos_Login_Correntista }"/>
+                           IsPassword="True" Style="{ StaticResource Campos_Login_Correntista }"/>
+
+                    <Button x:Name="btn_senha" Text="Exibir senha"
+                            BackgroundColor="Transparent" TextColor="#000000"
+                            HorizontalOptions="End" FontSize="12"
+                            Clicked="btn_senha_Clicked"/>
 
                     <Button x:Name="btn_login" Text="Entrar"
-                            Clicked="btn_login_Clicked" Margin="0,35,0,0"
+                            Clicked="btn_login_Clicked" Margin="0,20,0,0"
                             Style="{ StaticResource Botao_Login }"/>
 
                     <Button x:Name="btn_cadastrar_correntista" Text="Criar Conta"
