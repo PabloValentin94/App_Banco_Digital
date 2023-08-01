@@ -45,9 +45,9 @@ namespace App_Banco_Digital
                     if(correntista_encontrado.Count > 0)
                     {
 
-                        await DisplayAlert("Atenção!", "Login efetuado com sucesso.", "OK");
+                        await DisplayAlert("Atenção!", "Login efetuado com sucesso! Seja bem-vindo(a) " + txt_usuario.Text + ".", "OK");
 
-                        App.Current.MainPage = new NavigationPage(new View.Modules.Outros.Home());
+                        App.Current.MainPage = new View.Modules.Outros.Menu();
 
                     }
 

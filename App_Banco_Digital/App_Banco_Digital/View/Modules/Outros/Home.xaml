@@ -4,18 +4,18 @@
              x:Class="App_Banco_Digital.View.Modules.Outros.Home"
              Style="{ StaticResource Estilo_Digio }">
 
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
 
-        <!--<ToolbarItem x:Name="btn_menu" Priority="0" Order="Primary"/>-->
+        <ToolbarItem x:Name="btn_menu" Priority="0" Order="Primary"/>
 
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Content>
         
         <StackLayout>
-            
-            
-            
+
+            <Label Text="Teste"/>
+
         </StackLayout>
         
     </ContentPage.Content>

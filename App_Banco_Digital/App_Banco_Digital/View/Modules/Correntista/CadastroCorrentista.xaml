@@ -22,18 +22,18 @@
 
                         <Label Text="Nome:" Style="{ StaticResource Titulos_Cadastros }"/>
                         <Entry x:Name="txt_nome_correntista" Placeholder="Crie um nome de usuário"
-                               Style="{ StaticResource Campos_Cadastros }"/>
+                               MaxLength="50" Style="{ StaticResource Campos_Cadastros }"/>
 
                         <Label Text="CPF:" Style="{ StaticResource Titulos_Cadastros }"/>
                         <Entry x:Name="txt_cpf_correntista" Placeholder="Insira seu CPF"
-                               Style="{ StaticResource Campos_Cadastros }"/>
+                               MaxLength="14" Style="{ StaticResource Campos_Cadastros }"/>
 
                         <Label Text="Data de Nascimento:" Style="{ StaticResource Titulos_Cadastros }"/>
                         <DatePicker x:Name="dtpck_data_nascimento_correntista" Format="dd/MM/yyyy"/>
 
                         <Label Text="Senha:" Style="{ StaticResource Titulos_Cadastros }"/>
                         <Entry x:Name="txt_senha_correntista" Placeholder="Crie uma senha"
-                               Style="{ StaticResource Campos_Cadastros }"/>
+                               MaxLength="20" Style="{ StaticResource Campos_Cadastros }"/>
 
                     </StackLayout>
 

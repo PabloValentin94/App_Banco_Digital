@@ -18,7 +18,7 @@
             </Style>
 
             <Style x:Key="Campos_Login_Correntista" TargetType="Entry">
-
+                
                 <Setter Property="TextColor" Value="#000000"/>
                 <Setter Property="ClearButtonVisibility" Value="WhileEditing"/>
                 <Setter Property="Keyboard" Value="Text"/>

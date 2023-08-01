@@ -49,7 +49,7 @@ namespace App_Banco_Digital.View.Modules.Correntista
 
                 Model.Correntista retorno = await Data_Service_Correntista.SaveAsyncCorrentista(model);
 
-                if(retorno.id_correntista != null)
+                if(!String.IsNullOrEmpty(retorno.id_correntista.ToString()))
                 {
 
                     await DisplayAlert("Atenção!", "Cadastro efetuado com sucesso.", "OK");

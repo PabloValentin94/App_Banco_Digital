@@ -10,15 +10,17 @@ namespace App_Banco_Digital.Model
 
         public int id_conta { get; set; }
 
-        public int numero { get; set; }
+        public double saldo { get; set; }
+
+        public double limite { get; set; }
 
         public string tipo { get; set; }
-
-        public string senha_conta { get; set; }
 
         public bool ativa { get; set; } = true;
 
         public int fk_correntista { get; set; }
+
+        public DateTime data_abertura { get; set; }
 
     }
 

@@ -19,6 +19,8 @@ namespace App_Banco_Digital.View.Modules.Outros
 
             InitializeComponent();
 
+            NavigationPage.SetHasNavigationBar(this, false);
+
             //btn_menu.IconImageSource = ImageSource.FromResource("App_Banco_Digital.View.Assets.Usuario.png");
 
         }
