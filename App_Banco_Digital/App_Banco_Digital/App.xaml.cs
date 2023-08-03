@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using System.Collections.Generic;
+using App_Banco_Digital.View.Modules.Outros;
 
 namespace App_Banco_Digital
 {
@@ -16,6 +17,8 @@ namespace App_Banco_Digital
             InitializeComponent();
 
             MainPage = new NavigationPage(new LoginCorrentista());
+
+            //MainPage = new View.Modules.Outros.Menu();
 
         }
 
