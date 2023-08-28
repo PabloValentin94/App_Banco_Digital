@@ -11,6 +11,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Assets\Cobrar.png" />
+    <None Remove="View\Assets\Pagar.png" />
+    <None Remove="View\Assets\Transferir.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="View\Assets\Cobrar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Assets\Pagar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Assets\Transferir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Assets\Usuario.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

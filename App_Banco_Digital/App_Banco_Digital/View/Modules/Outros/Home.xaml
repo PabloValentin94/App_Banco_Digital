@@ -4,65 +4,69 @@
              x:Class="App_Banco_Digital.View.Modules.Outros.Home"
              BackgroundColor="#00285F">
 
-    <!--<ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
 
         <ToolbarItem x:Name="btn_menu" Priority="0" Order="Primary"/>
 
-    </ContentPage.ToolbarItems>-->
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+
+        <Style x:Key="Mini_Botoes" TargetType="ImageButton">
+
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+
+        </Style>
+        
+    </ContentPage.Resources>
 
     <ContentPage.Content>
 
-        <ScrollView>
+        <ScrollView Orientation="Vertical">
 
-            <Grid RowDefinitions="400,*">
+            <Grid ColumnDefinitions="*" RowDefinitions="*,100,300" Padding="10" RowSpacing="20">
 
-                <Grid Grid.Row="0" ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*, 50" Padding="10">
+                <StackLayout Grid.Column="0" Grid.Row="0">
 
-                    <StackLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*">
+                        
+                        
+                        
+                    </Grid>
+                    
+                </StackLayout>
 
-                        <Frame CornerRadius="100">
-                            
-                            
-                            
-                        </Frame>
+                <ScrollView Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
 
-                        <Label Text="Nome do usuário."/>
+                    <Grid ColumnDefinitions="100,100,100,100" RowDefinitions="*">
 
-                    </StackLayout>
+                        <ImageButton x:Name="imgbtn_pagar" Clicked="imgbtn_pagar_Clicked"
+                                     Grid.Column="0" Grid.Row="0"
+                                     Style="{ StaticResource Mini_Botoes }"/>
 
-                    <Label Text="Minha conta" HorizontalTextAlignment="Start" FontAttributes="Bold"
-                           Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>
+                        <ImageButton x:Name="imgbtn_pix" Clicked="imgbtn_pix_Clicked"
+                                     Grid.Column="1" Grid.Row="0"
+                                     Style="{ StaticResource Mini_Botoes }"/>
 
-                    <Label Text="Saldo disponível" HorizontalTextAlignment="Start"
-                           Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+                        <ImageButton x:Name="imgbtn_trasnferir" Clicked="imgbtn_trasnferir_Clicked"
+                                     Grid.Column="2" Grid.Row="0"
+                                     Style="{ StaticResource Mini_Botoes }"/>
 
-                    <Label Text="$$$$$$$$$$$$$" HorizontalTextAlignment="Start"
-                           Grid.Column="0" Grid.Row="3"/>
+                        <ImageButton x:Name="imgbtn_cobrar" Clicked="imgbtn_cobrar_Clicked"
+                                     Grid.Column="3" Grid.Row="0"
+                                     Style="{ StaticResource Mini_Botoes }"/>
 
-                    <Label Text="Ocultar saldo" HorizontalTextAlignment="End"
-                           Grid.Column="1" Grid.Row="3"/>
+                    </Grid>
+                    
+                </ScrollView>
 
-                    <Label Text="Gerar extrato" HorizontalTextAlignment="Center"
-                           Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
-
-                    <StackLayout Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2">
-
-                        <Label Text="Opções"/>
-
-                    </StackLayout>
-
-                </Grid>
-
-                <Frame Grid.Row="1" BackgroundColor="#FFFFFF" CornerRadius="0">
-
-                    <StackLayout>
-
-
-
-                    </StackLayout>
-
+                <Frame Grid.Column="0" Grid.Row="2" BackgroundColor="Transparent" BorderColor="#FFFFFF">
+                    
+                    
+                    
                 </Frame>
-
+                
             </Grid>
 
         </ScrollView>

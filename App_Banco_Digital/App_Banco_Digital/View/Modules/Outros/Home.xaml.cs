@@ -19,9 +19,48 @@ namespace App_Banco_Digital.View.Modules.Outros
 
             InitializeComponent();
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            inicializar();
 
-            //btn_menu.IconImageSource = ImageSource.FromResource("App_Banco_Digital.View.Assets.Usuario.png");
+        }
+
+        private void inicializar()
+        {
+
+            // NavigationPage.SetHasNavigationBar(this, false);
+
+            btn_menu.IconImageSource = ImageSource.FromResource("App_Banco_Digital.View.Assets.Usuario.png");
+
+            imgbtn_pagar.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Pagar.png");
+
+            imgbtn_trasnferir.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Transferir.png");
+
+            imgbtn_cobrar.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Cobrar.png");
+
+        }
+
+        private void imgbtn_pagar_Clicked(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void imgbtn_pix_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgbtn_trasnferir_Clicked(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void imgbtn_cobrar_Clicked(object sender, EventArgs e)
+        {
+
+
 
         }
 
