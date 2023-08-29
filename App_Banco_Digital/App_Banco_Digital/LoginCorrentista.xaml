@@ -32,6 +32,8 @@
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="TextColor" Value="#000000"/>
                 <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderWidth" Value="3"/>
+                <Setter Property="BorderColor" Value="#000000"/>
                 <Setter Property="Margin" Value="0,20,0,0"/>
 
             </Style>
@@ -40,6 +42,8 @@
 
                 <Setter Property="BackgroundColor" Value="#00285F"/>
                 <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="BorderWidth" Value="0"/>
+                <Setter Property="Margin" Value="0,20,0,0"/>
 
             </Style>
 
@@ -76,11 +80,10 @@
                             Clicked="btn_senha_Clicked"/>
 
                     <Button x:Name="btn_login" Text="Entrar"
-                            Clicked="btn_login_Clicked" Margin="0,20,0,0"
+                            Clicked="btn_login_Clicked"
                             Style="{ StaticResource Botao_Login }"/>
 
                     <Button x:Name="btn_cadastrar_correntista" Text="Criar Conta"
-                            BorderColor="#000000" BorderWidth="3"
                             Clicked="btn_cadastrar_correntista_Clicked"
                             Style="{ StaticResource Botao_Cadastro_Correntista }"/>
 

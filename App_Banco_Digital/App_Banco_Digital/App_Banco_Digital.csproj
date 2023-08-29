@@ -13,6 +13,7 @@
   <ItemGroup>
     <None Remove="View\Assets\Cobrar.png" />
     <None Remove="View\Assets\Pagar.png" />
+    <None Remove="View\Assets\Pix.png" />
     <None Remove="View\Assets\Transferir.png" />
   </ItemGroup>
 
@@ -21,6 +22,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Assets\Pagar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Assets\Pix.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Assets\Transferir.png">
@@ -45,6 +49,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="LoginCorrentista.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Modules\ChavePix\CadastroChavePix.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Modules\Correntista\CadastroCorrentista.xaml">

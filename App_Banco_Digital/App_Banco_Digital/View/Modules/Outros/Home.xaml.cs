@@ -19,11 +19,11 @@ namespace App_Banco_Digital.View.Modules.Outros
 
             InitializeComponent();
 
-            inicializar();
+            Inicializar();
 
         }
 
-        private void inicializar()
+        private void Inicializar()
         {
 
             // NavigationPage.SetHasNavigationBar(this, false);
@@ -32,9 +32,18 @@ namespace App_Banco_Digital.View.Modules.Outros
 
             imgbtn_pagar.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Pagar.png");
 
+            imgbtn_pix.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Pix.png");
+
             imgbtn_trasnferir.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Transferir.png");
 
             imgbtn_cobrar.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Cobrar.png");
+
+        }
+
+        private async void btn_menu_Clicked(object sender, EventArgs e)
+        {
+
+            await DisplayAlert("Atenção!", "Você está conectado.", "OK");
 
         }
 

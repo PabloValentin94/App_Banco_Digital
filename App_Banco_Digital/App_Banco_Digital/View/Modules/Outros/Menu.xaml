@@ -8,22 +8,45 @@
 
         <ContentPage Title="Menu" Style="{ StaticResource Estilo_Digio }">
 
+            <ContentPage.Resources>
+
+                <Style x:Key="Botoes_Menu" TargetType="Button">
+
+                    <Setter Property="BackgroundColor" Value="Transparent"/>
+                    <Setter Property="CornerRadius" Value="20"/>
+                    <Setter Property="BorderWidth" Value="2"/>
+                    <Setter Property="BorderColor" Value="#00285F"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+
+                </Style>
+                
+            </ContentPage.Resources>
+
             <ContentPage.Content>
 
-                <Grid RowDefinitions="200,*" Padding="10,15,10,15">
+                <Grid RowDefinitions="200,*,50" Padding="10,15,10,15">
 
-                    <Frame Grid.Row="0" CornerRadius="15"
+                    <Frame Grid.Column="0"  Grid.Row="0" CornerRadius="15"
                            BorderColor="#00285F" BackgroundColor="#FFFFFF">
 
                         <Image x:Name="img_logo" Aspect="AspectFit"/>
 
                     </Frame>
 
-                    <ScrollView Grid.Row="1" BackgroundColor="Transparent">
+                    <ScrollView Grid.Column="0" Grid.Row="1" Padding="0,10,0,10"
+                                VerticalOptions="Start" BackgroundColor="Transparent">
 
-                        <Button Text="Teste"/>
+                        <Button x:Name="btn_chaves_pix" Text="Chaves Pix"
+                                Clicked="btn_chaves_pix_Clicked"
+                                Style="{ StaticResource Botoes_Menu }"/>
 
                     </ScrollView>
+
+                    <Button x:Name="btn_sair" Text="SAIR" FontAttributes="Bold"
+                            CornerRadius="50" TextColor="#FFFFFF"
+                            BackgroundColor="#00285F" BorderWidth="0"
+                            Grid.Column="0" Grid.Row="2"
+                            Clicked="btn_sair_Clicked"/>
 
                 </Grid>
 
