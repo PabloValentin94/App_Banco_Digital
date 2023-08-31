@@ -25,30 +25,61 @@ namespace App_Banco_Digital.View.Modules.Outros
 
         }
 
-        private void Inicializar()
+        private async void Inicializar()
         {
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            try
+            {
 
-            img_logo.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Logotipo_Digio.png");
+                NavigationPage.SetHasNavigationBar(this, false);
 
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(View.Modules.Outros.Home)));
+                img_logo.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Logotipo_Digio.png");
 
-            IsPresented = false;
+                Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(View.Modules.Outros.Home)));
+
+                IsPresented = false;
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
         private async void Mudar_Pagina(Type tipo)
         {
 
-            if(await DisplayAlert("Atenção!", "A página atual será fechada! Tem certeza de que deseja prosseguir?", "Sim", "Não"))
+            try
             {
 
-                Detail = new NavigationPage((Page)Activator.CreateInstance(tipo));
+                if(await DisplayAlert("Atenção!", "A página atual será fechada! Tem certeza de que deseja prosseguir?", "Sim", "Não"))
+                {
 
-                IsPresented = false;
+                    Detail = new NavigationPage((Page)Activator.CreateInstance(tipo));
+
+                    IsPresented = false;
+
+                }
 
             }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
+
+        }
+
+        private void btn_home_Clicked(object sender, EventArgs e)
+        {
+
+            Mudar_Pagina(typeof(View.Modules.Outros.Home));
 
         }
 
@@ -62,10 +93,22 @@ namespace App_Banco_Digital.View.Modules.Outros
         private async void btn_sair_Clicked(object sender, EventArgs e)
         {
 
-            if(await DisplayAlert("Atenção!", "Deseja desconectar sua conta?", "Sim", "Não"))
+            try
             {
 
-                App.Current.MainPage = new NavigationPage(new LoginCorrentista());
+                if(await DisplayAlert("Atenção!", "Deseja desconectar sua conta?", "Sim", "Não"))
+                {
+
+                    App.Current.MainPage = new NavigationPage(new LoginCorrentista());
+
+                }
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
 
             }
 

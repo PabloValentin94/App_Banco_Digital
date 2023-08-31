@@ -21,17 +21,41 @@ namespace App_Banco_Digital.View.Modules.ChavePix
 
         }
 
-        public void Inicializar()
+        private async void Inicializar()
         {
 
+            try
+            {
 
+
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
-        private void btn_cadastrar_chave_pix_Clicked(object sender, EventArgs e)
+        private async void btn_cadastrar_chave_pix_Clicked(object sender, EventArgs e)
         {
 
+            try
+            {
 
+
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 

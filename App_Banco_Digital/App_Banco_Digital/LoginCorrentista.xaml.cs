@@ -27,12 +27,24 @@ namespace App_Banco_Digital
 
         }
 
-        private void Inicializar()
+        private async void Inicializar()
         {
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            try
+            {
 
-            img_logo.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Logotipo_Digio.png");
+                NavigationPage.SetHasNavigationBar(this, false);
+
+                img_logo.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Logotipo_Digio.png");
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
@@ -123,24 +135,36 @@ namespace App_Banco_Digital
 
         }
 
-        private void btn_senha_Clicked(object sender, EventArgs e)
+        private async void btn_senha_Clicked(object sender, EventArgs e)
         {
 
-            if(txt_senha.IsPassword)
+            try
             {
 
-                txt_senha.IsPassword = false;
+                if (txt_senha.IsPassword)
+                {
 
-                btn_senha.Text = "Ocultar senha";
+                    txt_senha.IsPassword = false;
+
+                    btn_senha.Text = "Ocultar senha";
+
+                }
+
+                else
+                {
+
+                    txt_senha.IsPassword = true;
+
+                    btn_senha.Text = "Exibir senha";
+
+                }
 
             }
 
-            else
+            catch(Exception ex)
             {
 
-                txt_senha.IsPassword = true;
-
-                btn_senha.Text = "Exibir senha";
+                await DisplayAlert("Erro!", ex.Message, "OK");
 
             }
 

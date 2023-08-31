@@ -37,9 +37,7 @@ namespace App_Banco_Digital.Service
 
                     HttpResponseMessage requisicao_api = await cliente.GetAsync(uri);
 
-                    Console.WriteLine("_______________________________");
-                    Console.WriteLine(requisicao_api.Content.ReadAsStringAsync().Result);
-                    Console.WriteLine("_______________________________");
+                    ShowMessageInConsole(requisicao_api.Content.ReadAsStringAsync().Result);
 
                     if(requisicao_api.IsSuccessStatusCode)
                     {
@@ -87,9 +85,7 @@ namespace App_Banco_Digital.Service
                                                    new StringContent(objeto_json, Encoding.UTF8,
                                                    "application/json"));
 
-                    Console.WriteLine("_______________________________");
-                    Console.WriteLine(requisicao_api.Content.ReadAsStringAsync().Result);
-                    Console.WriteLine("_______________________________");
+                    ShowMessageInConsole(requisicao_api.Content.ReadAsStringAsync().Result);
 
                     if(requisicao_api.IsSuccessStatusCode)
                     {
@@ -148,6 +144,15 @@ namespace App_Banco_Digital.Service
             }
 
             return mensagem_erro;
+
+        }
+
+        private static void ShowMessageInConsole(string texto)
+        {
+
+            Console.WriteLine("_______________________________");
+            Console.WriteLine(texto);
+            Console.WriteLine("_______________________________");
 
         }
 
