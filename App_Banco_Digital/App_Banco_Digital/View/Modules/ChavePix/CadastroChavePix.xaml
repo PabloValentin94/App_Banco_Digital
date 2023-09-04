@@ -2,51 +2,60 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Banco_Digital.View.Modules.ChavePix.CadastroChavePix">
-    
+
     <ContentPage.Content>
 
-        <ScrollView Padding="20">
+        <Grid ColumnDefinitions="*" RowDefinitions="*,100" Padding="20">
 
-            <Grid RowDefinitions="*,100">
+            <StackLayout Grid.Row="0">
 
-                <StackLayout Grid.Row="0">
+                <Label Text="Chaves Pix:" FontSize="40"
+                       Style="{ StaticResource Titulos_Cadastros }"/>
 
-                    <Label Text="Chaves Pix:" FontSize="40"
-                           Style="{ StaticResource Titulos_Cadastros }"/>
+                <Line X1="0" X2="1000" Y1="0" Y2="0"
+                      Stroke="#000000" Margin="0,0,0,20"/>
 
-                    <Line X1="0" X2="1000" Y1="0" Y2="0"
-                          Stroke="#000000" Margin="0,0,0,20"/>
+                <ScrollView Orientation="Vertical">
 
-                    <StackLayout>
+                    <Grid ColumnDefinitions="*" RowDefinitions="*,300">
 
-                        <Label Text="Crie e edite chaves para receber transações via Pix."/>
+                        <StackLayout Grid.Column="0" Grid.Row="0">
 
-                        <RadioButton Content="CPF" GroupName="Tipo" Margin="0,10,0,0"/>
-                        <RadioButton Content="RG" GroupName="Tipo"/>
-                        <RadioButton Content="Telefone" GroupName="Tipo"/>
-                        <RadioButton Content="E-mail" GroupName="Tipo"/>
-                        <RadioButton Content="Aleatória" GroupName="Tipo" Margin="0,0,0,10"/>
+                            <Label Text="Crie e edite chaves para receber transações via Pix."/>
 
-                        <Label Text="Chaves já cadastradas:"/>
+                            <RadioButton Content="CPF" GroupName="Tipo" Margin="0,10,0,0"/>
+                            <RadioButton Content="RG" GroupName="Tipo"/>
+                            <RadioButton Content="Telefone" GroupName="Tipo"/>
+                            <RadioButton Content="E-mail" GroupName="Tipo"/>
+                            <RadioButton Content="Aleatória" GroupName="Tipo" Margin="0,0,0,10"/>
 
-                        <ListView x:Name="lst_listagem_chaves_pix" HasUnevenRows="True"
-                                  BackgroundColor="#FFFFFF" Margin="0"/>
+                            <Label Text="Chaves já cadastradas:" Margin="0,0,0,20"/>
 
-                    </StackLayout>
+                        </StackLayout>
 
-                </StackLayout>
+                        <Frame Grid.Column="0" Grid.Row="1" Padding="0"
+                               BackgroundColor="#FFFFFF" BorderColor="#000000">
 
-                <StackLayout Grid.Row="1" VerticalOptions="Center">
+                            <ListView x:Name="lst_listagem_chaves_pix" HasUnevenRows="True"
+                                      BackgroundColor="Transparent" Margin="0"/>
 
-                    <Button x:Name="btn_cadastrar_chave_pix" Text="Cadastrar"
-                            Clicked="btn_cadastrar_chave_pix_Clicked"
-                            Style="{ StaticResource Botoes_Cadastros }"/>
+                        </Frame>
 
-                </StackLayout>
+                    </Grid>
 
-            </Grid>
+                </ScrollView>
 
-        </ScrollView>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" VerticalOptions="Center">
+
+                <Button x:Name="btn_cadastrar_chave_pix" Text="Cadastrar"
+                        Clicked="btn_cadastrar_chave_pix_Clicked"
+                        Style="{ StaticResource Botoes_Cadastros }"/>
+
+            </StackLayout>
+
+        </Grid>
 
     </ContentPage.Content>
     

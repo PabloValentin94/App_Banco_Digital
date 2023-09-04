@@ -33,7 +33,7 @@
 
         <ScrollView Orientation="Vertical">
 
-            <Grid ColumnDefinitions="*" RowDefinitions="*,125,300" Padding="10" RowSpacing="20">
+            <Grid ColumnDefinitions="*" RowDefinitions="*,125,250" Padding="10" RowSpacing="20">
 
                 <StackLayout Grid.Column="0" Grid.Row="0">
 
@@ -81,10 +81,11 @@
                     
                 </ScrollView>
 
-                <Frame Grid.Column="0" Grid.Row="2" BackgroundColor="Transparent" BorderColor="#FFFFFF">
-                    
-                    
-                    
+                <Frame Grid.Column="0" Grid.Row="2" Padding="20" CornerRadius="10"
+                       BackgroundColor="#FFFFFF" BorderColor="#FFFFFF">
+
+                    <Image x:Name="img_banner" Aspect="AspectFit"/>
+
                 </Frame>
                 
             </Grid>

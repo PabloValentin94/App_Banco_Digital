@@ -23,34 +23,74 @@ namespace App_Banco_Digital.View.Modules.Outros
 
         }
 
-        private void Inicializar()
+        private async void Inicializar()
         {
 
-            // NavigationPage.SetHasNavigationBar(this, false);
+            try
+            {
 
-            btn_menu.IconImageSource = ImageSource.FromResource("App_Banco_Digital.View.Assets.Usuario.png");
+                // NavigationPage.SetHasNavigationBar(this, false);
 
-            imgbtn_pagar.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Pagar.png");
+                string caminho_fixo = "App_Banco_Digital.View.Assets.";
 
-            imgbtn_pix.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Pix.png");
+                btn_menu.IconImageSource = ImageSource.FromResource(caminho_fixo + "Usuario.png");
 
-            imgbtn_trasnferir.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Transferir.png");
+                imgbtn_pagar.Source = ImageSource.FromResource(caminho_fixo + "Pagar.png");
 
-            imgbtn_cobrar.Source = ImageSource.FromResource("App_Banco_Digital.View.Assets.Cobrar.png");
+                imgbtn_pix.Source = ImageSource.FromResource(caminho_fixo + "Pix.png");
+
+                imgbtn_trasnferir.Source = ImageSource.FromResource(caminho_fixo + "Transferir.png");
+
+                imgbtn_cobrar.Source = ImageSource.FromResource(caminho_fixo + "Cobrar.png");
+
+                img_banner.Source = ImageSource.FromResource(caminho_fixo + "Cartao.png");
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
         private async void btn_menu_Clicked(object sender, EventArgs e)
         {
 
-            await DisplayAlert("Atenção!", "Você está conectado.", "OK");
+            try
+            {
+
+                await DisplayAlert("Atenção!", "Você está conectado.", "OK");
+
+            }
+
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
-        private void imgbtn_pagar_Clicked(object sender, EventArgs e)
+        private async void imgbtn_pagar_Clicked(object sender, EventArgs e)
         {
 
+            try
+            {
 
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
@@ -59,17 +99,41 @@ namespace App_Banco_Digital.View.Modules.Outros
 
         }
 
-        private void imgbtn_trasnferir_Clicked(object sender, EventArgs e)
+        private async void imgbtn_trasnferir_Clicked(object sender, EventArgs e)
         {
 
+            try
+            {
 
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
-        private void imgbtn_cobrar_Clicked(object sender, EventArgs e)
+        private async void imgbtn_cobrar_Clicked(object sender, EventArgs e)
         {
 
+            try
+            {
 
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
