@@ -11,6 +11,8 @@ namespace App_Banco_Digital
     public partial class App : Application
     {
 
+        public static Model.Correntista usuario_logado;
+
         public App()
         {
 

@@ -78,6 +78,8 @@ namespace App_Banco_Digital
 
                             await DisplayAlert("Atenção!", "Login efetuado com sucesso! Seja bem-vindo(a), " + txt_usuario.Text + ".", "OK");
 
+                            App.usuario_logado = correntista_encontrado[0];
+
                             App.Current.MainPage = new View.Modules.Outros.Menu();
 
                         }
