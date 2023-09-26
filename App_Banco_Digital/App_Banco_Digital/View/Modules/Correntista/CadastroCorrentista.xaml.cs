@@ -34,25 +34,25 @@ namespace App_Banco_Digital.View.Modules.Correntista
             try
             {
 
-                Model.Correntista model = new Model.Correntista()
+                Model.Correntista dados = new Model.Correntista()
                 {
 
                     nome = txt_nome_correntista.Text,
 
                     cpf = txt_cpf_correntista.Text.Replace(".", "").Replace("-", ""),
 
-                    data_nascimento = dtpck_data_nascimento_correntista.Date,
+                    data_nascimento = dtpck_data_nascimento_correntista.Date.ToString("yyyy-MM-dd"),
 
                     senha_correntista = txt_senha_correntista.Text
 
                 };
 
-                Model.Correntista retorno = await Data_Service_Correntista.SaveAsyncCorrentista(model);
+                Model.Correntista objeto_retornado = await dados.Save();
 
-                if(!String.IsNullOrEmpty(retorno.id_correntista.ToString()))
+                if(objeto_retornado.id_correntista != null)
                 {
 
-                    await DisplayAlert("Atenção!", "Cadastro efetuado com sucesso.", "OK");
+                    await DisplayAlert("Atenção!", "Dados salvos com sucesso.", "OK");
 
                     await Navigation.PopAsync();
 
@@ -61,7 +61,7 @@ namespace App_Banco_Digital.View.Modules.Correntista
                 else
                 {
 
-                    throw new Exception("Não foi possível efetuar o cadastro! Tente novamente.");
+                    throw new Exception("Não foi possível salvar estes dados! Revise-os e tente novamente.");
 
                 }
 

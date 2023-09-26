@@ -40,6 +40,19 @@ namespace App_Banco_Digital.Service
 
         }
 
+        public static async Task<bool> EnableAsyncCorrentista(int id)
+        {
+
+            var post_json = JsonConvert.SerializeObject(id);
+
+            string json = await Data_Service.SendDataApi(post_json, "/correntista/enable");
+
+            bool exito = JsonConvert.DeserializeObject<bool>(json);
+
+            return exito;
+
+        }
+
         public static async Task<List<Correntista>> GetListAsyncCorrentista()
         {
 
@@ -64,14 +77,14 @@ namespace App_Banco_Digital.Service
 
         }
 
-        public static async Task<List<Correntista>> LoginAsyncCorrentista(string[] dados_login)
+        public static async Task<Correntista> LoginAsyncCorrentista(string[] dados_login)
         {
 
             var post_json = JsonConvert.SerializeObject(dados_login);
 
             string json = await Data_Service.SendDataApi(post_json, "/correntista/login");
 
-            List<Correntista> correntista_correspondente = JsonConvert.DeserializeObject<List<Correntista>>(json);
+            Correntista correntista_correspondente = JsonConvert.DeserializeObject<Correntista>(json);
 
             return correntista_correspondente;
 

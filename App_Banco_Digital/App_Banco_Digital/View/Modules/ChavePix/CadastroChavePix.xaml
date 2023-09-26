@@ -25,19 +25,24 @@
                             <Label Text="Crie e edite chaves para receber transações via Pix."/>
 
                             <RadioButton x:Name="rdbtn_cpf" Content="CPF" GroupName="Tipo"
-                                         Margin="0,10,0,0" Value="0" CheckedChanged="rdbtn_CheckedChanged"/>
+                                         Margin="0,10,0,0" Value="0" TextColor="{ StaticResource Cor_Padrao_Texto }"
+                                         CheckedChanged="rdbtn_CheckedChanged"/>
                             
                             <RadioButton x:Name="rdbtn_cnpj" Content="CNPJ"
-                                         GroupName="Tipo" Value="1" CheckedChanged="rdbtn_CheckedChanged"/>
+                                         GroupName="Tipo" Value="1" TextColor="{ StaticResource Cor_Padrao_Texto }"
+                                         CheckedChanged="rdbtn_CheckedChanged"/>
                             
                             <RadioButton x:Name="rdbtn_telefone" Content="Telefone"
-                                         GroupName="Tipo" Value="2" CheckedChanged="rdbtn_CheckedChanged"/>
+                                         GroupName="Tipo" Value="2" TextColor="{ StaticResource Cor_Padrao_Texto }"
+                                         CheckedChanged="rdbtn_CheckedChanged"/>
                             
                             <RadioButton x:Name="rdbtn_email" Content="E-mail"
-                                         GroupName="Tipo" Value="3" CheckedChanged="rdbtn_CheckedChanged"/>
+                                         GroupName="Tipo" Value="3" TextColor="{ StaticResource Cor_Padrao_Texto }"
+                                         CheckedChanged="rdbtn_CheckedChanged"/>
                             
                             <RadioButton x:Name="rdbtn_aleatoria" Content="Aleatória" GroupName="Tipo"
-                                         Margin="0,0,0,10" Value="4" CheckedChanged="rdbtn_CheckedChanged"/>
+                                         Margin="0,0,0,10" Value="4" TextColor="{ StaticResource Cor_Padrao_Texto }"
+                                         CheckedChanged="rdbtn_CheckedChanged"/>
 
                             <Label Text="Chaves já cadastradas:" Margin="0,0,0,20"/>
 
@@ -47,7 +52,15 @@
                                BackgroundColor="#FFFFFF" BorderColor="#000000">
 
                             <ListView x:Name="lst_listagem_chaves_pix" HasUnevenRows="True"
-                                      BackgroundColor="Transparent" Margin="0"/>
+                                      BackgroundColor="Transparent" Margin="0">
+
+                                <!--<ListView.Header>
+                                    
+                                    
+                                    
+                                </ListView.Header>-->
+                                
+                            </ListView>
 
                         </Frame>
 

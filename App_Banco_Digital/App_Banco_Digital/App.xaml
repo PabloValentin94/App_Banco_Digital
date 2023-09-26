@@ -2,8 +2,10 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Banco_Digital.App">
-    
+
     <Application.Resources>
+
+        <Color x:Key="Cor_Padrao_Texto">#000000</Color>
 
         <Style x:Key="Estilo_Digio" TargetType="Page">
 
@@ -13,7 +15,7 @@
 
         <Style x:Key="Titulos_Cadastros" TargetType="Label">
 
-            <Setter Property="TextColor" Value="#000000"/>
+            <Setter Property="TextColor" Value="{ StaticResource Cor_Padrao_Texto }"/>
             <Setter Property="HorizontalTextAlignment" Value="Start"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="FontSize" Value="Large"/>
@@ -22,7 +24,7 @@
 
         <Style x:Key="Campos_Cadastros" TargetType="Entry">
 
-            <Setter Property="TextColor" Value="#000000"/>
+            <Setter Property="TextColor" Value="{ StaticResource Cor_Padrao_Texto }"/>
             <Setter Property="ClearButtonVisibility" Value="WhileEditing"/>
             <Setter Property="Keyboard" Value="Text"/>
             <Setter Property="HorizontalTextAlignment" Value="Start"/>

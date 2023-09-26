@@ -71,14 +71,14 @@ namespace App_Banco_Digital
 
                         string[] dados_login = { txt_usuario.Text, txt_senha.Text };
 
-                        List<Correntista> correntista_encontrado = await Data_Service_Correntista.LoginAsyncCorrentista(dados_login);
+                        Correntista correntista_encontrado = await Model.Correntista.Login(dados_login);
 
-                        if(correntista_encontrado.Count > 0)
+                        if(correntista_encontrado != null)
                         {
 
                             await DisplayAlert("Atenção!", "Login efetuado com sucesso! Seja bem-vindo(a), " + txt_usuario.Text + ".", "OK");
 
-                            App.usuario_logado = correntista_encontrado[0];
+                            App.usuario_logado = correntista_encontrado;
 
                             App.Current.MainPage = new View.Modules.Outros.Menu();
 
@@ -143,7 +143,7 @@ namespace App_Banco_Digital
             try
             {
 
-                if (txt_senha.IsPassword)
+                if(txt_senha.IsPassword)
                 {
 
                     txt_senha.IsPassword = false;

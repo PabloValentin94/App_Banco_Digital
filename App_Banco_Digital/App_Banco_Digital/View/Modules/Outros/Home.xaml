@@ -38,9 +38,17 @@
                 <StackLayout Grid.Column="0" Grid.Row="0">
 
                     <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*">
-                        
-                        
-                        
+
+                        <Label Text="Minha Conta" TextColor="#FFFFFF" FontAttributes="Bold"
+                               FontSize="20" Grid.Column="0" Grid.Row="0"/>
+
+                        <Label x:Name="lbl_tipo_conta" TextColor="#FFFFFF" Grid.Column="0" Grid.Row="1"/>
+
+                        <Label Text="Saldo Disponível" TextColor="#FFFFFF" FontAttributes="Bold"
+                               FontSize="20" Grid.Column="0" Grid.Row="2"/>
+
+                        <Label x:Name="lbl_saldo_disponivel_conta" TextColor="#FFFFFF" Grid.Column="1" Grid.Row="3"/>
+
                     </Grid>
                     
                 </StackLayout>

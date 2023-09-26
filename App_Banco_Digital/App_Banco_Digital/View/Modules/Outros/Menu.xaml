@@ -26,7 +26,7 @@
                     <Setter Property="CornerRadius" Value="50"/>
                     <Setter Property="BorderWidth" Value="2"/>
                     <Setter Property="BorderColor" Value="#00285F"/>
-                    <Setter Property="TextColor" Value="#000000"/>
+                    <Setter Property="TextColor" Value="{ StaticResource Cor_Padrao_Texto }"/>
                     <Setter Property="FontAttributes" Value="Bold"/>
 
                 </Style>
