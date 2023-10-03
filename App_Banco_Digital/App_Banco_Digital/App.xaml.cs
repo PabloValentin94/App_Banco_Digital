@@ -13,16 +13,16 @@ namespace App_Banco_Digital
 
         public static Model.Correntista usuario_logado;
 
-        public static string conta_atual = "Corrente";
+        public static Model.Conta conta_atual;
 
         public App()
         {
 
             InitializeComponent();
 
-            //MainPage = new NavigationPage(new LoginCorrentista());
+            MainPage = new NavigationPage(new LoginCorrentista());
 
-            MainPage = new View.Modules.Outros.Menu();
+            //MainPage = new View.Modules.Outros.Menu();
 
         }
 
@@ -46,5 +46,7 @@ namespace App_Banco_Digital
 
 
         }
+
     }
+
 }

@@ -14,7 +14,7 @@ namespace App_Banco_Digital.Service
     public class Data_Service_Chave_Pix : Data_Service
     {
 
-        public static async Task<Chave_Pix> SaveAsyncChavePix(Chave_Pix model)
+        public static async Task<Chave_Pix>? SaveAsyncChavePix(Chave_Pix model)
         {
 
             var post_json = JsonConvert.SerializeObject(model);
@@ -27,7 +27,7 @@ namespace App_Banco_Digital.Service
 
         }
 
-        public static async Task<bool> RemoveAsyncChavePix(int id)
+        public static async Task<bool>? RemoveAsyncChavePix(int id)
         {
 
             var post_json = JsonConvert.SerializeObject(id);
@@ -40,7 +40,7 @@ namespace App_Banco_Digital.Service
 
         }
 
-        public static async Task<List<Chave_Pix>> GetListAsyncChavePix()
+        public static async Task<List<Chave_Pix>>? GetListAsyncChavePix()
         {
 
             string json = await Data_Service.GetDataApi("/chave_pix/list");
@@ -51,7 +51,7 @@ namespace App_Banco_Digital.Service
 
         }
 
-        public static async Task<List<Chave_Pix>> SearchAsyncChavePix(string parametro)
+        public static async Task<List<Chave_Pix>>? SearchAsyncChavePix(string parametro)
         {
 
             var post_json = JsonConvert.SerializeObject(parametro);

@@ -160,36 +160,22 @@ namespace App_Banco_Digital.View.Modules.ChavePix
                                                                 "Salvar", "Cancelar", "Insira a chave pix",
                                                                 20, Keyboard.Text);
 
-                    if(!String.IsNullOrEmpty(chave_pix))
+                    Model.Chave_Pix dados = new Model.Chave_Pix()
                     {
 
-                        Model.Chave_Pix model = new Model.Chave_Pix()
-                        {
+                        chave = chave_pix,
 
-                            chave = chave_pix,
+                        tipo = valores_chave_pix[this.tipo_chave_pix]
 
-                            tipo = valores_chave_pix[this.tipo_chave_pix]
+                    };
 
-                        };
+                    if(Convert.ToBoolean(dados.Save()))
+                    {
 
-                        Model.Chave_Pix retorno = await Service.Data_Service_Chave_Pix.SaveAsyncChavePix(model);
-
-                        if(!String.IsNullOrEmpty(retorno.id_chave_pix.ToString()))
-                        {
-
-                            await DisplayAlert("Atenção!", "Chave Pix cadastrada com sucesso.", "OK");
-
-                        }
-
-                        else
-                        {
-
-                            throw new Exception("Não foi possível efetuar o cadastro! Tente novamente.");
-
-                        }
+                        await DisplayAlert("Atenção!", "Dados salvos com sucesso.", "OK");
 
                     }
-                    
+
                 }
 
             }
