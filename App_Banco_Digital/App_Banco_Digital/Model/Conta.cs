@@ -16,11 +16,11 @@ namespace App_Banco_Digital.Model
 
         public string tipo { get; set; }
 
-        public bool ativa { get; set; } = true;
+        public int ativa { get; set; } = 1;
 
         public int fk_correntista { get; set; }
 
-        public DateTime data_abertura { get; set; }
+        public string data_abertura { get; set; } = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
     }
 

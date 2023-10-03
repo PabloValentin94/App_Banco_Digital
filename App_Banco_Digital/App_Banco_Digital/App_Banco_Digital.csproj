@@ -11,14 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="View\Assets\Cartao.png" />
-    <None Remove="View\Assets\Cobrar.png" />
-    <None Remove="View\Assets\Pagar.png" />
-    <None Remove="View\Assets\Pix.png" />
-    <None Remove="View\Assets\Transferir.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="View\Assets\Cartao.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

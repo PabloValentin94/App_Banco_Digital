@@ -39,29 +39,22 @@ namespace App_Banco_Digital.View.Modules.Correntista
 
                     nome = txt_nome_correntista.Text,
 
-                    cpf = txt_cpf_correntista.Text.Replace(".", "").Replace("-", ""),
+                    cpf = txt_cpf_correntista.Text,
+
+                    email = txt_email_correntista.Text,
 
                     data_nascimento = dtpck_data_nascimento_correntista.Date.ToString("yyyy-MM-dd"),
 
-                    senha_correntista = txt_senha_correntista.Text
+                    senha = txt_senha_correntista.Text
 
                 };
 
-                Model.Correntista objeto_retornado = await dados.Save();
-
-                if(objeto_retornado.id_correntista != null)
+                if(Convert.ToBoolean(await dados.Save()))
                 {
 
                     await DisplayAlert("Atenção!", "Dados salvos com sucesso.", "OK");
 
                     await Navigation.PopAsync();
-
-                }
-
-                else
-                {
-
-                    throw new Exception("Não foi possível salvar estes dados! Revise-os e tente novamente.");
 
                 }
 

@@ -12,40 +12,97 @@ namespace App_Banco_Digital.Model
     public class Correntista
     {
 
-        public int id_correntista { get; set; }
+        public int id { get; set; }
 
         public string nome { get; set; }
 
         public string cpf { get; set; }
 
+        public string email { get; set; }
+
         public string data_nascimento { get; set; }
 
-        public string senha_correntista { get; set; }
+        public string senha { get; set; }
 
         public int ativo { get; set; } = 1;
 
         public string data_cadastro { get; set; } = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-        public string[] dados_contas { get; set; }
+        public List<Model.Conta> dados_contas { get; set; }
 
-        public async Task<Correntista> Save()
+        public async Task<bool> Save()
         {
 
-            return await Service.Data_Service_Correntista.SaveAsyncCorrentista(this);
+            if(String.IsNullOrEmpty(this.nome) || String.IsNullOrEmpty(this.cpf) ||
+               String.IsNullOrEmpty(this.data_nascimento) || String.IsNullOrEmpty(this.senha))
+            {
 
-        }
+                throw new Exception("Preencha todos os campos obrigatórios antes de prosseguir.");
 
-        public static async Task<bool> Disable(int id)
-        {
+            }
 
-            return await Service.Data_Service_Correntista.DisableAsyncCorrentista(id);
+            else
+            {
+
+                Model.Correntista objeto_retornado = await Service.Data_Service_Correntista.SaveAsyncCorrentista(this);
+
+                if(objeto_retornado.id != null)
+                {
+
+                    return true;
+
+                }
+
+                else
+                {
+
+                    throw new Exception("Não foi possível salvar esses dados! Revise-os e tente novamente.");
+
+                }
+
+            }
 
         }
 
         public static async Task<bool> Enable(int id)
         {
 
-            return await Service.Data_Service_Correntista.EnableAsyncCorrentista(id);
+            bool exito = await Service.Data_Service_Correntista.EnableAsyncCorrentista(id);
+
+            if(exito)
+            {
+
+                return true;
+                
+            }
+
+            else
+            {
+
+                return false;
+
+            }
+
+        }
+
+        public static async Task<bool> Disable(int id)
+        {
+
+            bool exito = await Service.Data_Service_Correntista.DisableAsyncCorrentista(id);
+
+            if(exito)
+            {
+
+                return true;
+
+            }
+
+            else
+            {
+
+                return false;
+
+            }
 
         }
 
