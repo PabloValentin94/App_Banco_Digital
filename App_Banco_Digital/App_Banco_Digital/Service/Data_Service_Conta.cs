@@ -14,7 +14,7 @@ namespace App_Banco_Digital.Service
     public class Data_Service_Conta : Data_Service
     {
 
-        public static async Task<Conta>? SaveAsyncConta(Conta model)
+        public static async Task<Conta> SaveAsyncConta(Conta model)
         {
 
             var post_json = JsonConvert.SerializeObject(model);
@@ -27,7 +27,7 @@ namespace App_Banco_Digital.Service
 
         }
 
-        public static async Task<bool>? EnableAsyncConta(int id)
+        public static async Task<bool> EnableAsyncConta(int id)
         {
 
             var post_json = JsonConvert.SerializeObject(id);
@@ -40,7 +40,7 @@ namespace App_Banco_Digital.Service
 
         }
 
-        public static async Task<bool>? DisableAsyncConta(int id)
+        public static async Task<bool> DisableAsyncConta(int id)
         {
 
             var post_json = JsonConvert.SerializeObject(id);
@@ -53,7 +53,7 @@ namespace App_Banco_Digital.Service
 
         }
 
-        public static async Task<List<Conta>>? GetListAsyncConta()
+        public static async Task<List<Conta>> GetListAsyncConta()
         {
 
             string get_json = await Data_Service.GetDataApi("/conta/list");
@@ -64,14 +64,14 @@ namespace App_Banco_Digital.Service
 
         }
 
-        public static async Tsk<List<Conta>>? SearchAsyncConta(string parametro)
+        public static async Task<List<Conta>> SearchAsyncConta(int parametro)
         {
 
             var post_json = JsonConvert.SerializeObject(parametro);
 
             string json = await Data_Service.SendDataApi(post_json, "/conta/search");
 
-            List<Conta> lista_contas_encontradas = JsonConvert.SerializeObject<List<Conta>>(json);
+            List<Conta> lista_contas_encontradas = JsonConvert.DeserializeObject<List<Conta>>(json);
 
             return lista_contas_encontradas;
 

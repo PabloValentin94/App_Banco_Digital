@@ -23,7 +23,7 @@ namespace App_Banco_Digital.View.Modules.ChavePix
 
         }
 
-        private async void Inicializar()
+        /*private async void Inicializar()
         {
 
             try
@@ -40,7 +40,7 @@ namespace App_Banco_Digital.View.Modules.ChavePix
 
             }
 
-        }
+        }*/
 
         private void Trocar_Valor_Checkbox()
         {
@@ -142,6 +142,13 @@ namespace App_Banco_Digital.View.Modules.ChavePix
 
                     }
 
+                    else
+                    {
+
+                        break;
+
+                    }
+
                 }
 
                 if(condicao == 5)
@@ -165,7 +172,9 @@ namespace App_Banco_Digital.View.Modules.ChavePix
 
                         chave = chave_pix,
 
-                        tipo = valores_chave_pix[this.tipo_chave_pix]
+                        tipo = valores_chave_pix[this.tipo_chave_pix],
+
+                        fk_conta = App.conta_atual.id
 
                     };
 

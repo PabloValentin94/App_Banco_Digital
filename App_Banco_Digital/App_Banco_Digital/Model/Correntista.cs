@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
 using System.Threading.Tasks;
 
 using App_Banco_Digital.Model;
@@ -18,7 +19,7 @@ namespace App_Banco_Digital.Model
 
         public string cpf { get; set; }
 
-        public string? email { get; set; }
+        public string email { get; set; }
 
         public string data_nascimento { get; set; }
 
@@ -28,9 +29,9 @@ namespace App_Banco_Digital.Model
 
         public string data_cadastro { get; set; } = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-        public List<Model.Conta>? dados_contas { get; set; }
+        public List<Model.Conta> dados_contas { get; set; }
 
-        public async Task<bool>? Save()
+        public async Task<bool> Save()
         {
 
             if(String.IsNullOrEmpty(this.nome) || String.IsNullOrEmpty(this.cpf) ||
@@ -64,7 +65,7 @@ namespace App_Banco_Digital.Model
 
         }
 
-        public static async Task<bool>? Enable(int id)
+        public static async Task<bool> Enable(int id)
         {
 
             bool exito = await Service.Data_Service_Correntista.EnableAsyncCorrentista(id);
@@ -85,7 +86,7 @@ namespace App_Banco_Digital.Model
 
         }
 
-        public static async Task<bool>? Disable(int id)
+        public static async Task<bool> Disable(int id)
         {
 
             bool exito = await Service.Data_Service_Correntista.DisableAsyncCorrentista(id);
@@ -106,21 +107,21 @@ namespace App_Banco_Digital.Model
 
         }
 
-        public static async Task<List<Correntista>>? GetList()
+        public static async Task<List<Correntista>> GetList()
         {
 
             return await Service.Data_Service_Correntista.GetListAsyncCorrentista();
 
         }
 
-        public static async Task<List<Correntista>>? Search(string parametro)
+        public static async Task<List<Correntista>> Search(string parametro)
         {
 
             return await Service.Data_Service_Correntista.SearchAsyncCorrentista(parametro);
 
         }
 
-        public static async Task<Correntista>? Login(string[] dados_login)
+        public static async Task<Correntista> Login(string[] dados_login)
         {
 
             return await Service.Data_Service_Correntista.LoginAsyncCorrentista(dados_login);

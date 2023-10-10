@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
+using System.Threading.Tasks;
+
+using App_Banco_Digital.Model;
+using App_Banco_Digital.Service;
+
 namespace App_Banco_Digital.Model
 {
 

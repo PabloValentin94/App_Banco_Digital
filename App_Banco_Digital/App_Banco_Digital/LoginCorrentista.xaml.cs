@@ -80,6 +80,10 @@ namespace App_Banco_Digital
 
                             App.usuario_logado = correntista_encontrado;
 
+                            correntista_encontrado.dados_contas = await Model.Conta.Search(correntista_encontrado.id);
+
+                            App.conta_atual = correntista_encontrado.dados_contas[0];
+
                             App.Current.MainPage = new View.Modules.Outros.Menu();
 
                         }
@@ -87,8 +91,7 @@ namespace App_Banco_Digital
                         else
                         {
 
-                            await DisplayAlert("Atenção!", "Nenhum usuário encontrado! Verifique " +
-                                               "se você realmente está cadastrado e tente novamente.", "OK");
+                            throw new Exception("Nenhum usuário encontrado! Verifique se você realmente está cadastrado e tente novamente.");
 
                         }
 
@@ -99,7 +102,7 @@ namespace App_Banco_Digital
                 else
                 {
 
-                    await DisplayAlert("Atenção!", "Preencha todos os campos antes de prosseguir.", "OK");
+                    throw new Exception("Preencha todos os campos antes de prosseguir.");
 
                 }
 

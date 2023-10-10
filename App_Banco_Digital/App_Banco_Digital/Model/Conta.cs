@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
+using System.Threading.Tasks;
+
+using App_Banco_Digital.Model;
+using App_Banco_Digital.Service;
+
 namespace App_Banco_Digital.Model
 {
 
@@ -41,7 +46,7 @@ namespace App_Banco_Digital.Model
 
         }*/
 
-        public static async Task<bool>? Enable(int id)
+        public static async Task<bool> Enable(int id)
         {
 
             bool exito = await Service.Data_Service_Conta.EnableAsyncConta(id);
@@ -62,7 +67,7 @@ namespace App_Banco_Digital.Model
 
         }
 
-        public static async Task<bool>? Disable(int id)
+        public static async Task<bool> Disable(int id)
         {
 
             bool exito = await Service.Data_Service_Conta.DisableAsyncConta(id);
@@ -83,14 +88,14 @@ namespace App_Banco_Digital.Model
 
         }
 
-        public static async Task<List<Correntista>>? GetList()
+        public static async Task<List<Conta>> GetList()
         {
 
             return await Service.Data_Service_Conta.GetListAsyncConta();
 
         }
 
-        public static async Task<List<Correntista>>? Search(string parametro)
+        public static async Task<List<Conta>> Search(int parametro)
         {
 
             return await Service.Data_Service_Conta.SearchAsyncConta(parametro);

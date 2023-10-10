@@ -22,7 +22,7 @@ namespace App_Banco_Digital
 
             MainPage = new NavigationPage(new LoginCorrentista());
 
-            //MainPage = new View.Modules.Outros.Menu();
+            //MainPage = new View.Modules.ChavePix.CadastroChavePix();
 
         }
 
