@@ -1,5 +1,4 @@
-﻿using App_Banco_Digital.Service;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -24,7 +23,7 @@ namespace App_Banco_Digital.Model
         public async Task<bool> Save()
         {
 
-            if(String.IsNullOrEmpty(this.chave) || String.IsNullOrEmpty(this.tipo) || fk_conta == 0)
+            if(String.IsNullOrWhiteSpace(this.chave) || String.IsNullOrWhiteSpace(this.tipo) || fk_conta < 1)
             {
 
                 throw new Exception("Preencha todos os campos obrigatórios antes de prosseguir.");

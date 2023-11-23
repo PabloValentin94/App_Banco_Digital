@@ -19,6 +19,13 @@ namespace App_Banco_Digital.Model
 
         public double valor { get; set; }
 
+        /*public async Task<bool> Save()
+        {
+
+            Model.Transacao transacao_retornada = await Data_Service_Transacao.
+
+        }*/
+
     }
 
 }

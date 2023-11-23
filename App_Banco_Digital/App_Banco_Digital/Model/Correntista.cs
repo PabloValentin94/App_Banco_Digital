@@ -34,8 +34,8 @@ namespace App_Banco_Digital.Model
         public async Task<bool> Save()
         {
 
-            if(String.IsNullOrEmpty(this.nome) || String.IsNullOrEmpty(this.cpf) ||
-               String.IsNullOrEmpty(this.data_nascimento) || String.IsNullOrEmpty(this.senha))
+            if(String.IsNullOrWhiteSpace(this.nome) || String.IsNullOrWhiteSpace(this.cpf) ||
+               String.IsNullOrWhiteSpace(this.data_nascimento) || String.IsNullOrWhiteSpace(this.senha))
             {
 
                 throw new Exception("Preencha todos os campos obrigatórios antes de prosseguir.");

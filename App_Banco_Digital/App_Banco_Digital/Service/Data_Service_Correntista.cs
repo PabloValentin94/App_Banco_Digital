@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 using App_Banco_Digital.Model;
 using App_Banco_Digital.Service;
+
+using Newtonsoft.Json;
 
 namespace App_Banco_Digital.Service
 {

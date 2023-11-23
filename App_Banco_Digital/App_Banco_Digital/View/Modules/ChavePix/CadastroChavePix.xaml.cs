@@ -151,7 +151,7 @@ namespace App_Banco_Digital.View.Modules.ChavePix
 
                 }
 
-                if(condicao == 5)
+                if(condicao < 0 || condicao >= 5)
                 {
 
                     await DisplayAlert("Atenção!", "Selecione uma das opções.", "OK");
@@ -163,9 +163,46 @@ namespace App_Banco_Digital.View.Modules.ChavePix
 
                     string[] valores_chave_pix = { "CPF", "CNPJ", "Email", "Telefone", "Aleatoria" };
 
+                    int limite_campo = 14;
+
+                    switch(valores_chave_pix[this.tipo_chave_pix])
+                    {
+
+                        case "CPF":
+
+                            limite_campo = 14;
+
+                        break;
+
+                        case "CNPJ":
+
+                            limite_campo = 18;
+
+                        break;
+
+                        case "Email":
+
+                            limite_campo = 60;
+
+                        break;
+
+                        case "Telefone":
+
+                            limite_campo = 15;
+
+                        break;
+
+                        case "Aleatoria":
+
+                            limite_campo = 32;
+
+                        break;
+
+                    }
+
                     string chave_pix = await DisplayPromptAsync("Salvando chave pix.", "Insira abaixo:",
                                                                 "Salvar", "Cancelar", "Insira a chave pix",
-                                                                20, Keyboard.Text);
+                                                                limite_campo, Keyboard.Text);
 
                     Model.Chave_Pix dados = new Model.Chave_Pix()
                     {
@@ -178,7 +215,7 @@ namespace App_Banco_Digital.View.Modules.ChavePix
 
                     };
 
-                    if(Convert.ToBoolean(dados.Save()))
+                    if(await dados.Save())
                     {
 
                         await DisplayAlert("Atenção!", "Dados salvos com sucesso.", "OK");

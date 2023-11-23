@@ -54,7 +54,7 @@ namespace App_Banco_Digital
             try
             {
 
-                if(!String.IsNullOrEmpty(txt_usuario.Text) && !String.IsNullOrEmpty(txt_senha.Text))
+                if(!String.IsNullOrWhiteSpace(txt_usuario.Text) && !String.IsNullOrWhiteSpace(txt_senha.Text))
                 {
 
                     if(txt_usuario.Text == "Root" && txt_senha.Text == "Etecjau")

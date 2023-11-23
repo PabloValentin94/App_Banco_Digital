@@ -23,14 +23,14 @@ namespace App_Banco_Digital.Model
 
         public int ativa { get; set; } = 1;
 
-        public int fk_correntista { get; set; } = 0;
+        public int fk_correntista { get; set; }
 
         public string data_abertura { get; set; } = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-        /*public async Task<bool>? Save()
+        public async Task<bool> Save()
         {
 
-            if()
+            if(String.IsNullOrWhiteSpace(this.tipo) || this.fk_correntista < 1)
             {
 
                 throw new Exception("Preencha todos os campos obrigatórios antes de prosseguir.");
@@ -40,11 +40,25 @@ namespace App_Banco_Digital.Model
             else
             {
 
+                Model.Conta conta_retornada = await Data_Service_Conta.SaveAsyncConta(this);
 
+                if (conta_retornada.id != null)
+                {
+
+                    return true;
+
+                }
+
+                else
+                {
+
+                    throw new Exception("Não foi possível salvar esses dados! Revise-os e tente novamente.");
+
+                }
 
             }
 
-        }*/
+        }
 
         public static async Task<bool> Enable(int id)
         {
